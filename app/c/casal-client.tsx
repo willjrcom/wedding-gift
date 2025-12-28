@@ -1,4 +1,3 @@
-
 'use client'
 
 import Link from 'next/link'
@@ -12,7 +11,9 @@ import { useEffect, useMemo, useState } from 'react'
 import { readFavorites, writeFavorites } from '../lib/favorites'
 
 export default function CasalClient() {
-  const d = useSearchParams().get('d')
+  const sp = useSearchParams()
+  const d = sp.get('d')
+  const tab = sp.get('tab')
 
   const [toast, setToast] = useState('')
   const [query, setQuery] = useState('')
@@ -25,16 +26,19 @@ export default function CasalClient() {
   }, [d])
 
   useEffect(() => {
-    const ids = readFavorites()
-    setFavSet(new Set(ids))
+    setFavSet(new Set(readFavorites()))
   }, [])
+
+  useEffect(() => {
+    setOnlyFavs(tab === 'favs')
+  }, [tab])
 
   if (!d || !data) return null
 
   function flash(msg: string) {
     setToast(msg)
     window.clearTimeout((flash as any)._t)
-      ; (flash as any)._t = window.setTimeout(() => setToast(''), 1500)
+    ;(flash as any)._t = window.setTimeout(() => setToast(''), 1500)
   }
 
   async function share() {
@@ -43,24 +47,6 @@ export default function CasalClient() {
       if (navigator.share) {
         await navigator.share({
           title: data.coupleName || 'Lista de Presentes',
-          text: 'Acesse nossa lista de presentes 💜',
-          url
-        })
-        return
-      }
-      await navigator.clipboard.writeText(url)
-      flash('Link copiado!')
-    } catch {
-      // ignore
-    }
-  }
-
-  async function profile() {
-    const url = window.location.href
-    try {
-      if (navigator.profile) {
-        await navigator.profile({
-          title: data.coupleName || 'Perfil do Casal',
           text: 'Acesse nossa lista de presentes 💜',
           url
         })
@@ -99,6 +85,9 @@ export default function CasalClient() {
       return matches && favOk
     })
   }, [query, onlyFavs, favSet])
+
+  const isPresentesActive = !onlyFavs
+  const isFavActive = onlyFavs
 
   return (
     <main className="min-h-screen">
@@ -157,7 +146,7 @@ export default function CasalClient() {
             <input
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              placeholder="Buscar presentes..."
+              placeholder={onlyFavs ? 'Buscar nos favoritos...' : 'Buscar presentes...'}
               className="w-full outline-none text-slate-700 placeholder:text-slate-400"
             />
             {query ? (
@@ -170,18 +159,6 @@ export default function CasalClient() {
               </button>
             ) : null}
           </div>
-        </div>
-
-        {/* Only Favorites */}
-        <div className="mt-4 flex gap-3 overflow-x-auto pb-1">
-          <button
-            onClick={() => setOnlyFavs((v) => !v)}
-            className={`shrink-0 rounded-full px-4 py-2 font-semibold flex items-center gap-2 shadow-soft border ${onlyFavs ? 'bg-primary text-white border-primary' : 'bg-white text-slate-900 border-gray-200'
-              }`}
-          >
-            <span className="material-symbols-outlined">{onlyFavs ? 'favorite' : 'favorite'}</span>
-            Favoritos
-          </button>
         </div>
 
         {/* Gift grid */}
@@ -197,19 +174,13 @@ export default function CasalClient() {
                       e.stopPropagation()
                       toggleFav(String(g.id))
                     }}
-                    className={`absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center shadow-soft transition
-    ${isFav ? 'bg-red-500' : 'bg-white/90 backdrop-blur'}
-  `}
+                    style={{
+                      backgroundColor: isFav ? '#ef4444' : 'rgba(255,255,255,0.9)'
+                    }}
+                    className="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center shadow-soft backdrop-blur transition"
                     aria-label={isFav ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
-                    title={isFav ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
                   >
-                    <span
-                      className={
-                        isFav
-                          ? 'material-symbols-filled text-white'
-                          : 'material-symbols-outlined text-slate-500'
-                      }
-                    >
+                    <span className={isFav ? 'material-symbols-filled text-white' : 'material-symbols-outlined text-slate-500'}>
                       favorite
                     </span>
                   </button>
@@ -230,28 +201,34 @@ export default function CasalClient() {
           })}
         </div>
 
-        {filtered.length === 0 ? (
-          <div className="mt-10 text-center text-slate-500">
-            Nenhum presente encontrado.
-          </div>
-        ) : null}
+        {filtered.length === 0 ? <div className="mt-10 text-center text-slate-500">Nenhum presente encontrado.</div> : null}
       </div>
 
-      {/* Bottom nav */}
+      {/* Bottom nav: Presentes / Favoritos / Perfil */}
       <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200/60">
-        <div className="mx-auto max-w-md px-6 py-3 flex items-center justify-between text-xs text-slate-500">
-          <a className="flex flex-col items-center gap-1 text-primary font-semibold" href={`/c?d=${d}`}>
+        <div className="mx-auto max-w-md px-6 py-3 flex items-center justify-around text-xs text-slate-500">
+          <Link
+            className={`flex flex-col items-center gap-1 ${isPresentesActive ? 'text-primary font-semibold' : ''}`}
+            href={`/c?d=${d}`}
+          >
             <span className="material-symbols-outlined">grid_view</span>
             Presentes
-          </a>
-          <button className="flex flex-col items-center gap-1" onClick={() => setOnlyFavs(true)}>
-            <span className={onlyFavs ? 'material-symbols-filled text-primary' : 'material-symbols-outlined'}>favorite</span>
+          </Link>
+
+          <Link
+            className={`flex flex-col items-center gap-1 ${isFavActive ? 'text-primary font-semibold' : ''}`}
+            href={`/c?d=${d}&tab=favs`}
+          >
+            <span className={isFavActive ? 'material-symbols-filled text-primary' : 'material-symbols-outlined'}>
+              favorite
+            </span>
             Favoritos
-          </button>
-          <button className="flex flex-col items-center gap-1" onClick={share}>
-            <span className="material-symbols-outlined">share</span>
-            Compartilhar
-          </button>
+          </Link>
+
+          <Link className="flex flex-col items-center gap-1" href={`/perfil?d=${d}`}>
+            <span className="material-symbols-outlined">person</span>
+            Perfil
+          </Link>
         </div>
       </nav>
     </main>

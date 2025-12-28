@@ -31,7 +31,7 @@ export default function ProdutoClient({ gift }: { gift: any }) {
   function flash(msg: string) {
     setToast(msg)
     window.clearTimeout((flash as any)._t)
-      ; (flash as any)._t = window.setTimeout(() => setToast(''), 1500)
+    ;(flash as any)._t = window.setTimeout(() => setToast(''), 1500)
   }
 
   function persist(next: Set<string>) {
@@ -70,12 +70,10 @@ export default function ProdutoClient({ gift }: { gift: any }) {
         right={
           <button
             onClick={toggleFav}
-            className={`w-10 h-10 rounded-full shadow-soft flex items-center justify-center active:scale-[0.98] transition
-    ${isFav ? 'bg-red-500' : 'bg-white'}
-  `}
+            className="w-10 h-10 rounded-full bg-white shadow-soft flex items-center justify-center active:scale-[0.98] transition"
             aria-label={isFav ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
           >
-            <span className={isFav ? 'material-symbols-filled text-white' : 'material-symbols-outlined text-slate-500'}>
+            <span className={isFav ? 'material-symbols-filled text-primary' : 'material-symbols-outlined text-slate-500'}>
               favorite
             </span>
           </button>
