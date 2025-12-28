@@ -1,49 +1,62 @@
 
 'use client'
 
-import { useMemo, useState } from 'react'
+import { useMemo, useState, useEffect } from 'react'
 import { useSearchParams } from 'next/navigation'
 import TopBar from '../../components/TopBar'
 import Toast from '../../components/Toast'
 import { decode } from '../../lib/encode'
 import { formatBRL } from '../../lib/format'
+import { readFavorites, writeFavorites } from '../../lib/favorites'
 
 export default function ProdutoClient({ gift }: { gift: any }) {
   const d = useSearchParams().get('d')
   const [showPix, setShowPix] = useState(false)
   const [toast, setToast] = useState('')
+  const [favSet, setFavSet] = useState<Set<string>>(new Set())
 
   const data: any = useMemo(() => {
     if (!d) return null
-    try {
-      return decode(d)
-    } catch {
-      return { __invalid: true }
-    }
+    return decode(d)
   }, [d])
+
+  useEffect(() => {
+    setFavSet(new Set(readFavorites()))
+  }, [])
 
   if (!d || !data) return null
 
-  if (data.__invalid) {
-    return (
-      <main className="min-h-screen">
-        <TopBar title="Detalhes" backHref="/criar" />
-        <div className="mx-auto max-w-md px-4 py-10">
-          <div className="rounded-3xl bg-white shadow-soft border border-gray-100 p-6">
-            <h2 className="text-xl font-bold">Link inválido</h2>
-            <p className="text-slate-600 mt-2">Volte e gere um novo link.</p>
-            <a href="/criar" className="mt-5 inline-flex w-full items-center justify-center rounded-full bg-primary py-4 text-white font-semibold shadow-soft">Gerar link</a>
-          </div>
-        </div>
-      </main>
-    )
+  const isFav = favSet.has(String(gift.id))
+
+  function flash(msg: string) {
+    setToast(msg)
+    window.clearTimeout((flash as any)._t)
+      ; (flash as any)._t = window.setTimeout(() => setToast(''), 1500)
+  }
+
+  function persist(next: Set<string>) {
+    setFavSet(next)
+    writeFavorites(Array.from(next))
+  }
+
+  function toggleFav() {
+    const next = new Set(favSet)
+    const id = String(gift.id)
+    if (next.has(id)) {
+      next.delete(id)
+      persist(next)
+      flash('Removido dos favoritos')
+      return
+    }
+    next.add(id)
+    persist(next)
+    flash('Adicionado aos favoritos')
   }
 
   async function copyPix() {
     try {
       await navigator.clipboard.writeText(String(data.pixKey || ''))
-      setToast('Chave Pix copiada!')
-      setTimeout(() => setToast(''), 1500)
+      flash('Chave Pix copiada!')
     } catch {
       // silent
     }
@@ -51,7 +64,23 @@ export default function ProdutoClient({ gift }: { gift: any }) {
 
   return (
     <main className="min-h-screen">
-      <TopBar title="Detalhes" backHref={`/c?d=${d}`} right={<span className="material-symbols-filled text-primary">favorite</span>} />
+      <TopBar
+        title="Detalhes"
+        backHref={`/c?d=${d}`}
+        right={
+          <button
+            onClick={toggleFav}
+            className={`w-10 h-10 rounded-full shadow-soft flex items-center justify-center active:scale-[0.98] transition
+    ${isFav ? 'bg-red-500' : 'bg-white'}
+  `}
+            aria-label={isFav ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
+          >
+            <span className={isFav ? 'material-symbols-filled text-white' : 'material-symbols-outlined text-slate-500'}>
+              favorite
+            </span>
+          </button>
+        }
+      />
 
       <Toast show={!!toast} text={toast} />
 
@@ -76,7 +105,6 @@ export default function ProdutoClient({ gift }: { gift: any }) {
           </div>
         </div>
 
-        {/* Seller / couple info card */}
         <div className="mt-5 rounded-3xl bg-white shadow-soft border border-gray-100 p-4 flex items-center gap-3">
           <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-100 border border-gray-200">
             <img
@@ -98,7 +126,6 @@ export default function ProdutoClient({ gift }: { gift: any }) {
           {gift.description || 'Um presente cheio de carinho para ajudar nessa nova fase.'}
         </p>
 
-        {/* Info pills */}
         <div className="mt-5 grid grid-cols-2 gap-4">
           <div className="rounded-3xl bg-white border border-gray-100 shadow-soft p-4">
             <div className="text-xs font-bold tracking-widest text-slate-400">TIPO PIX</div>
@@ -111,7 +138,6 @@ export default function ProdutoClient({ gift }: { gift: any }) {
         </div>
       </div>
 
-      {/* Bottom action area like example */}
       <div className="fixed bottom-0 left-0 right-0 bg-background-light/90 backdrop-blur-md border-t border-gray-200/60">
         <div className="mx-auto max-w-md px-4 py-4 flex flex-col gap-3">
           {!showPix ? (
