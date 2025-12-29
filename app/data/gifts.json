@@ -35,7 +35,7 @@
     "description": "Processador multifunção, corta, rala, fatia e tritura. Capacidade 2L, lâminas em aço inox, ideal para saladas, massas e sobremesas."
   },
   {
-    "id": "cafeteira-elétrica",
+    "id": "cafeteira-eletrica",
     "title": "Cafeteira elétrica (Cadence)",
     "price": 299,
     "image": "/images/cafeteira-cadence.webp",
@@ -49,7 +49,7 @@
     "description": "Cafeteira italiana Moka, alumínio resistente, prepara café encorpado e aromático. Fácil de usar, ideal para quem aprecia café tradicional."
   },
   {
-    "id": "chaleira-elétrica",
+    "id": "chaleira-eletrica",
     "title": "Chaleira elétrica (Electrolux)",
     "price": 179,
     "image": "/images/chaleira-electrolux.webp",
@@ -63,7 +63,7 @@
     "description": "Torradeira elétrica, 6 níveis de tostagem, bandeja coletora de migalhas. Prepara pães crocantes rapidamente, design elegante."
   },
   {
-    "id": "sanduicheiragrill",
+    "id": "sanduicheira-grill",
     "title": "Sanduicheira/grill (Britânia)",
     "price": 189,
     "image": "/images/sanduicheiragrill-britania.webp",
@@ -84,14 +84,14 @@
     "description": "Panela de pressão 4,5L, aço inox, sistema de segurança triplo. Cozinha feijão, carnes e legumes de forma rápida e prática."
   },
   {
-    "id": "panela-elétrica-de-arroz",
+    "id": "panela-eletrica-de-arroz",
     "title": "Panela elétrica de arroz (Arno)",
     "price": 199,
     "image": "/images/panela-arroz-arno.webp",
     "description": "Panela elétrica de arroz, capacidade 1,8L, cozimento uniforme, mantém aquecido. Ideal para preparar arroz perfeito todos os dias."
   },
   {
-    "id": "panela-elétrica-multifunções",
+    "id": "panela-eletrica-multifuncoes",
     "title": "Panela elétrica multifunções (Philco)",
     "price": 399,
     "image": "/images/panela-multifuncoes-philco.webp",
@@ -161,21 +161,21 @@
     "description": "Afiador de facas manual, compacto e eficiente. Mantenha suas facas sempre afiadas com segurança e facilidade."
   },
   {
-    "id": "tábua-de-corte-bambu",
+    "id": "tabua-de-corte-bambu",
     "title": "Tábua de corte (bambu) (Cuisinart)",
     "price": 99,
     "image": "/images/tabua-corte-bambu-cuisinart.webp",
     "description": "Tábua de corte em bambu, resistente e durável. Superfície antibacteriana, ideal para cortar carnes, frutas e vegetais."
   },
   {
-    "id": "kit-de-utensílios-de-silicone",
+    "id": "kit-de-utensilios-de-silicone",
     "title": "Kit de utensílios de silicone (Tramontina)",
     "price": 119,
     "image": "/images/kit-utensilios-silicone-tramontina.webp",
     "description": "Kit com 5 utensílios de silicone, resistentes a altas temperaturas. Ideal para cozinhar e assar, não risca as superfícies."
   },
   {
-    "id": "conchas-e-espátulas-kit",
+    "id": "conchas-e-espatulas-kit",
     "title": "Conchas e espátulas (kit) (Tramontina)",
     "price": 89,
     "image": "/images/conchas-espatulas-tramontina.webp",
@@ -203,7 +203,7 @@
     "description": "Abridor de vinho elétrico, remove a rolha com facilidade. Acompanha cortador de lacre. Presente ideal para apreciadores de vinho."
   },
   {
-    "id": "jogo-de-taças-de-vinho",
+    "id": "jogo-de-tacas-de-vinho",
     "title": "Jogo de taças de vinho (Crystal Glass)",
     "price": 179,
     "image": "/images/jogo-tacas-vinho.webp",
@@ -217,7 +217,7 @@
     "description": "Kit com 6 copos de vidro, design moderno e elegante. Perfeitos para água, sucos e drinks."
   },
   {
-    "id": "jogo-de-xícaras-de-café",
+    "id": "jogo-de-xicaras-de-cafe",
     "title": "Jogo de xícaras de café (Porto Brasil)",
     "price": 139,
     "image": "/images/jogo-xicaras-cafe.webp",
@@ -252,7 +252,7 @@
     "description": "Kit com 3 tigelas em cerâmica, 500ml, 1L e 1,5L. Ideais para preparar e servir saladas, massas e sobremesas."
   },
   {
-    "id": "potes-herméticos-kit",
+    "id": "potes-hermeticos-kit",
     "title": "Potes herméticos (kit) (Hermético)",
     "price": 139,
     "image": "/images/potes-hermeticos-kit.webp",
@@ -273,28 +273,28 @@
     "description": "Conjunto com 6 potes de vidro, tampas herméticas. Ideal para armazenar alimentos, conservando o sabor e a crocância."
   },
   {
-    "id": "jarrafiltro-de-água",
+    "id": "jarrafiltro-de-agua",
     "title": "Jarra/filtro de água (Purific)",
     "price": 149,
     "image": "/images/jarrafiltro-agua.webp",
     "description": "Jarra com filtro de água, remove impurezas e cloro. Garante água pura e saudável para você e sua família."
   },
   {
-    "id": "filtro-de-água",
+    "id": "filtro-de-agua",
     "title": "Filtro de água (Soft Drink)",
     "price": 350,
     "image": "",
     "description": "Filtro de água com tecnologia de purificação avançada. Garante água limpa e saudável, removendo impurezas e cloro."
   },
   {
-    "id": "aspirador-de-pó",
+    "id": "aspirador-de-po",
     "title": "Aspirador de pó (Electrolux)",
     "price": 399,
     "image": "",
     "description": "Aspirador de pó vertical sem fio, 2 em 1. Bateria de longa duração, ideal para limpar pisos, carpetes e estofados."
   },
   {
-    "id": "robô-aspirador-cota",
+    "id": "robo-aspirador-cota",
     "title": "Robô aspirador (cota) (iRobot)",
     "price": 450,
     "image": "",
@@ -308,14 +308,14 @@
     "description": "Ferro de passar a vapor, 2200W, base antiaderente. Desamassa e alisa todos os tipos de tecidos com facilidade."
   },
   {
-    "id": "tábua-de-passar",
+    "id": "tabua-de-passar",
     "title": "Tábua de passar (Tramontina)",
     "price": 149,
     "image": "",
     "description": "Tábua de passar regulável em altura, com suporte para ferro. Superfície ampla e resistente, facilita o deslizamento do ferro."
   },
   {
-    "id": "varal-de-chão",
+    "id": "varal-de-chao",
     "title": "Varal de chão (Brinox)",
     "price": 119,
     "image": "",
@@ -350,7 +350,7 @@
     "description": "Kit com 6 toalhas de rosto em algodão 100%, macias e absorventes. Ideais para uso diário, disponíveis em várias cores."
   },
   {
-    "id": "roupões-par",
+    "id": "roupoes-par",
     "title": "Roupões (par) (Karsten)",
     "price": 219,
     "image": "",
@@ -364,7 +364,7 @@
     "description": "Tapete de banheiro em microfibra, antiderrapante. Super absorvente, seca rapidamente, disponível em várias cores."
   },
   {
-    "id": "kit-acessórios-banheiro",
+    "id": "kit-acessorios-banheiro",
     "title": "Kit acessórios banheiro (Inova)",
     "price": 89,
     "image": "",
@@ -392,7 +392,7 @@
     "description": "Edredom em microfibra, 250g/m², quente e aconchegante. Composição 100% poliéster, fácil de lavar e secar."
   },
   {
-    "id": "cobertormanta",
+    "id": "cobertor-manta",
     "title": "Cobertor/manta (Sultan)",
     "price": 169,
     "image": "",
@@ -406,7 +406,7 @@
     "description": "Travesseiros em espuma memory foam, conforto e suporte para a cabeça e pescoço. Capa removível e lavável."
   },
   {
-    "id": "protetor-de-colchão",
+    "id": "protetor-de-colchao",
     "title": "Protetor de colchão (Sultan)",
     "price": 129,
     "image": "",
@@ -469,28 +469,28 @@
     "description": "Organizador de temperos em acrílico, com 16 frascos. Mantenha seus temperos organizados e sempre à mão."
   },
   {
-    "id": "moedor-de-pimentasal",
+    "id": "moedor-de-pimenta-sal",
     "title": "Moedor de pimenta/sal (Inova)",
     "price": 89,
     "image": "",
     "description": "Moedor de pimenta e sal em inox, ajuste de moagem. Acompanha suporte para mesa. Praticidade e elegância na sua cozinha."
   },
   {
-    "id": "balança-de-cozinha",
+    "id": "balanca-de-cozinha",
     "title": "Balança de cozinha (Filizola)",
     "price": 99,
     "image": "",
     "description": "Balança digital de cozinha, capacidade 5kg, precisão de 1g. Tela LCD, fácil de usar e limpar."
   },
   {
-    "id": "termômetro-culinário",
+    "id": "termometro-culinario",
     "title": "Termômetro culinário (Mede Fácil)",
     "price": 79,
     "image": "",
     "description": "Termômetro culinário digital, faixa de medição -50°C a 300°C. Ideal para carnes, pães e doces."
   },
   {
-    "id": "forma-de-pãobolo-inglês",
+    "id": "forma-de-pao-bolo-ingles",
     "title": "Forma de pão/bolo inglês (Mestre das Facas)",
     "price": 69,
     "image": "",
@@ -532,7 +532,7 @@
     "description": "Jogo com 6 pratos de sobremesa em cerâmica, 20cm. Design elegante, ideal para servir suas sobremesas favoritas."
   },
   {
-    "id": "taças-para-drinks",
+    "id": "tacas-para-drinks",
     "title": "Taças para drinks (Crystal Glass)",
     "price": 159,
     "image": "",
@@ -581,7 +581,7 @@
     "description": "Kit com 5 potes para freezer em plástico BPA free. Ideal para armazenar alimentos, conservando o sabor e a frescura."
   },
   {
-    "id": "assento-sanitário-soft-close",
+    "id": "assento-sanitario-soft-close",
     "title": "Assento sanitário soft close (Deca)",
     "price": 129,
     "image": "",
@@ -595,7 +595,7 @@
     "description": "Lixeira em inox com pedal, 30L. Design moderno e higiênico, ideal para cozinhas."
   },
   {
-    "id": "kit-de-velas-aromáticas",
+    "id": "kit-de-velas-aromaticas",
     "title": "Kit de velas aromáticas (Yin Yang)",
     "price": 129,
     "image": "",
@@ -637,7 +637,7 @@
     "description": "Abajur de mesa com base em cerâmica e cúpula em tecido. Proporciona iluminação suave e aconchegante."
   },
   {
-    "id": "jogo-de-lençol-extra",
+    "id": "jogo-de-lencol-extra",
     "title": "Jogo de lençol extra (Sultan)",
     "price": 229,
     "image": "",
@@ -665,14 +665,14 @@
     "description": "Caixa organizadora em plástico resistente, com tampa. Ideal para armazenar roupas, brinquedos e acessórios."
   },
   {
-    "id": "kit-ferramentas-básico",
+    "id": "kit-ferramentas-basico",
     "title": "Kit ferramentas básico (Vonder)",
     "price": 149,
     "image": "",
     "description": "Kit com 10 ferramentas manuais essenciais, acompanha estojo. Ideal para pequenos reparos e manutenções."
   },
   {
-    "id": "extensãofiltro-de-linha",
+    "id": "extensao-filtro-de-linha",
     "title": "Extensão/filtro de linha (Suri)",
     "price": 79,
     "image": "",
@@ -686,7 +686,7 @@
     "description": "Kit completo de primeiros socorros, com 50 itens. Ideal para ter em casa, no carro ou em viagens."
   },
   {
-    "id": "cota-para-reformadecoração",
+    "id": "cota-para-reforma-decoracao",
     "title": "Cota para reforma/decoração (Presente Criativo)",
     "price": 200,
     "image": "",
