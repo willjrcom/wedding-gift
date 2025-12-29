@@ -1,236 +1,274 @@
 'use client'
 
+import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link'
 import { useSearchParams } from 'next/navigation'
 import gifts from '../data/gifts.json'
 import TopBar from '../components/TopBar'
 import Toast from '../components/Toast'
-import { decode } from '../lib/encode'
-import { formatBRL, formatDatePtBR } from '../lib/format'
-import { useEffect, useMemo, useState } from 'react'
+import InputField from '../components/InputField'
+import { formatBRL } from '../lib/format'
 import { readFavorites, writeFavorites } from '../lib/favorites'
+
+type CoupleData = {
+  coupleName: string
+  weddingDate: string
+  description: string
+  imageUrl: string
+  pixType?: string
+  pixKey?: string
+}
+
+const FALLBACK_AVATAR =
+  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200"><rect width="100%25" height="100%25" fill="%23f1f5f9"/><text x="50%25" y="52%25" dominant-baseline="middle" text-anchor="middle" fill="%2364758b" font-family="Arial" font-size="18">Foto</text></svg>'
+
+const FALLBACK_GIFT =
+  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><rect width="100%25" height="100%25" fill="%23f8fafc"/><text x="50%25" y="52%25" dominant-baseline="middle" text-anchor="middle" fill="%2364758b" font-family="Arial" font-size="22">Presente</text></svg>'
 
 export default function CasalClient() {
   const sp = useSearchParams()
-  const d = sp.get('d')
-  const tab = sp.get('tab')
+  const t = sp.get('t') || ''
+  const tab = sp.get('tab') || 'list'
 
-  const [toast, setToast] = useState('')
-  const [query, setQuery] = useState('')
-  const [onlyFavs, setOnlyFavs] = useState(false)
-  const [favSet, setFavSet] = useState<Set<string>>(new Set())
+  const [couple, setCouple] = useState<CoupleData | null>(null)
+  const [paid, setPaid] = useState(false)
+  const [loading, setLoading] = useState(true)
+  const [err, setErr] = useState('')
 
-  const data: any = useMemo(() => {
-    if (!d) return null
-    return decode(d)
-  }, [d])
+  const [q, setQ] = useState('')
+  const [toast, setToast] = useState<string | null>(null)
 
-  useEffect(() => {
-    setFavSet(new Set(readFavorites()))
-  }, [])
+  const [favorites, setFavorites] = useState<string[]>(() => readFavorites())
+
+  useEffect(() => writeFavorites(favorites), [favorites])
 
   useEffect(() => {
-    setOnlyFavs(tab === 'favs')
-  }, [tab])
-
-  if (!d || !data) return null
-
-  function flash(msg: string) {
-    setToast(msg)
-    window.clearTimeout((flash as any)._t)
-    ;(flash as any)._t = window.setTimeout(() => setToast(''), 1500)
-  }
-
-  async function share() {
-    const url = window.location.href
-    try {
-      if (navigator.share) {
-        await navigator.share({
-          title: data.coupleName || 'Lista de Presentes',
-          text: 'Acesse nossa lista de presentes 💜',
-          url
-        })
+    const run = async () => {
+      if (!t) {
+        setErr('Link inválido.')
+        setLoading(false)
         return
       }
-      await navigator.clipboard.writeText(url)
-      flash('Link copiado!')
-    } catch {
-      // ignore
+      setLoading(true)
+      setErr('')
+      try {
+        const res = await fetch(`/api/list/resolve?t=${encodeURIComponent(t)}`)
+        const data = await res.json()
+        if (!res.ok) throw new Error(data?.error || 'Não foi possível carregar a lista.')
+        setCouple(data.list.data)
+        setPaid(Boolean(data.list.paid))
+      } catch (e: any) {
+        setErr(e.message || 'Erro ao carregar')
+      } finally {
+        setLoading(false)
+      }
     }
-  }
+    run()
+  }, [t])
 
-  function persist(next: Set<string>) {
-    setFavSet(next)
-    writeFavorites(Array.from(next))
-  }
+  const baseUrl = useMemo(() => {
+    if (typeof window === 'undefined') return ''
+    return window.location.origin
+  }, [])
 
-  function toggleFav(id: string) {
-    const next = new Set(favSet)
-    if (next.has(id)) {
-      next.delete(id)
-      persist(next)
-      flash('Removido dos favoritos')
-      return
-    }
-    next.add(id)
-    persist(next)
-    flash('Adicionado aos favoritos')
-  }
+  const shareUrl = useMemo(() => {
+    if (!t) return ''
+    const url = new URL('/c', baseUrl || 'https://example.com')
+    url.searchParams.set('t', t)
+    return url.toString()
+  }, [t, baseUrl])
 
   const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase()
-    return (gifts as any[]).filter((g) => {
-      const matches = !q || String(g.title || '').toLowerCase().includes(q)
-      const favOk = !onlyFavs || favSet.has(String(g.id))
-      return matches && favOk
-    })
-  }, [query, onlyFavs, favSet])
+    const list = (gifts as any[]).slice()
+    const qq = q.trim().toLowerCase()
+    const byText = (g: any) => `${g.title} ${g.category}`.toLowerCase().includes(qq)
 
-  const isPresentesActive = !onlyFavs
-  const isFavActive = onlyFavs
+    const normal = qq ? list.filter(byText) : list
+    const onlyFavs = normal.filter(g => favorites.includes(String(g.id)))
+    return { normal, onlyFavs }
+  }, [q, favorites])
+
+  const toggleFav = (id: string) => {
+    setFavorites(prev => (prev.includes(id) ? prev.filter(x => x !== id) : [...prev, id]))
+    setToast(prev => prev ? null : 'Favoritos atualizados ✅')
+    setTimeout(() => setToast(null), 1400)
+  }
+
+  const copy = async (text: string) => {
+    try {
+      await navigator.clipboard.writeText(text)
+      setToast('Link copiado ✅')
+      setTimeout(() => setToast(null), 1400)
+    } catch {
+      setToast('Não consegui copiar 😅')
+      setTimeout(() => setToast(null), 1400)
+    }
+  }
+
+  if (loading) {
+    return (
+      <div className="mx-auto max-w-md px-4 pt-10">
+        <div className="rounded-3xl bg-white p-6 shadow-card">
+          <div className="text-sm text-slate-600">Carregando…</div>
+        </div>
+      </div>
+    )
+  }
+
+  if (err || !couple) {
+    return (
+      <div className="mx-auto max-w-md px-4 pt-10">
+        <div className="rounded-3xl bg-white p-6 shadow-card">
+          <div className="text-sm font-semibold text-rose-700">{err || 'Link inválido.'}</div>
+          <div className="mt-4">
+            <Link href="/criar" className="text-sm font-semibold text-primary">
+              Criar uma lista
+            </Link>
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  const listToShow = tab === 'favs' ? filtered.onlyFavs : filtered.normal
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-background-light">
       <TopBar
-        title="Presentes"
+        title="Lista"
         right={
           <button
-            onClick={share}
-            className="w-10 h-10 rounded-full bg-white shadow-soft flex items-center justify-center active:scale-[0.98] transition"
-            aria-label="Compartilhar"
+            onClick={() => copy(shareUrl)}
+            className="inline-flex items-center gap-1 rounded-full bg-slate-100 px-3 py-2 text-xs font-semibold text-slate-700"
           >
-            <span className="material-symbols-outlined text-primary">share</span>
+            Compartilhar
+            <span className="material-symbols-outlined text-base">share</span>
           </button>
         }
       />
 
-      <Toast show={!!toast} text={toast} />
-
-      <div className="mx-auto max-w-md px-4 pb-28">
-        {/* Couple hero */}
-        <div className="mt-4 rounded-3xl bg-white border border-gray-100 shadow-soft overflow-hidden">
-          <div className="p-4">
-            <div className="rounded-3xl overflow-hidden bg-gray-100">
+      <div className="mx-auto max-w-md px-4 pb-28 pt-6">
+        {/* header */}
+        <div className="rounded-3xl bg-white p-5 shadow-card">
+          <div className="flex items-center gap-4">
+            <div className="h-16 w-16 overflow-hidden rounded-2xl bg-slate-100">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src={data.imageUrl || 'https://via.placeholder.com/1200x800?text=Foto+do+casal'}
+                src={couple.imageUrl || FALLBACK_AVATAR}
                 alt="Foto do casal"
-                className="w-full h-56 object-cover"
+                className="h-full w-full object-cover"
+                referrerPolicy="no-referrer"
               />
             </div>
 
-            <div className="mt-4">
-              <h2 className="text-2xl font-bold leading-tight">{data.coupleName || 'Nosso Casamento'}</h2>
-              {data.weddingDate ? (
-                <p className="text-slate-600 mt-1 flex items-center gap-2">
-                  <span className="material-symbols-outlined text-slate-400">calendar_month</span>
-                  {formatDatePtBR(data.weddingDate)}
-                </p>
-              ) : null}
-
-              {data.description ? <p className="text-slate-700 mt-3 leading-relaxed">{data.description}</p> : null}
-
-              <button
-                onClick={share}
-                className="mt-4 w-full rounded-full bg-primary text-white py-3 font-semibold shadow-soft active:scale-[0.99] transition flex items-center justify-center gap-2"
-              >
-                Compartilhar lista <span className="material-symbols-outlined">ios_share</span>
-              </button>
+            <div className="min-w-0">
+              <div className="truncate text-base font-extrabold text-slate-900">{couple.coupleName}</div>
+              <div className="mt-0.5 text-xs font-semibold text-slate-500">{couple.weddingDate}</div>
+              <div className="mt-2 line-clamp-2 text-sm text-slate-600">{couple.description}</div>
             </div>
           </div>
+
+          {!paid ? (
+            <div className="mt-4 rounded-2xl bg-amber-50 px-4 py-3 text-xs font-semibold text-amber-800">
+              Pix ainda não ativado. No Perfil, clique em <b>Ativar Pix</b>.
+            </div>
+          ) : null}
         </div>
 
-        {/* Search bar */}
-        <div className="mt-5">
-          <div className="w-full rounded-full bg-white border border-gray-200 shadow-soft px-4 py-3 flex items-center gap-3">
-            <span className="material-symbols-outlined text-primary">search</span>
-            <input
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder={onlyFavs ? 'Buscar nos favoritos...' : 'Buscar presentes...'}
-              className="w-full outline-none text-slate-700 placeholder:text-slate-400"
-            />
-            {query ? (
-              <button
-                onClick={() => setQuery('')}
-                className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center"
-                aria-label="Limpar busca"
-              >
-                <span className="material-symbols-outlined text-primary text-[20px]">close</span>
-              </button>
+        {/* search */}
+        <div className="mt-4 rounded-3xl bg-white p-5 shadow-card">
+          <div className="flex items-center justify-between">
+            <h2 className="text-base font-extrabold">{tab === 'favs' ? 'Favoritos' : 'Presentes'}</h2>
+            <div className="text-xs font-semibold text-slate-500">{listToShow.length} itens</div>
+          </div>
+
+          <div className="mt-3">
+            <InputField label="" placeholder="Buscar presente..." value={q} onChange={setQ} />
+          </div>
+
+          <div className="mt-4 grid grid-cols-2 gap-4">
+            {listToShow.map((g: any) => {
+              const id = String(g.id)
+              const isFav = favorites.includes(id)
+              return (
+                <div key={id} className="rounded-3xl bg-white p-2 shadow-card">
+                  <div className="relative aspect-square w-full overflow-hidden rounded-3xl">
+                    <img
+                      src={g.image || FALLBACK_GIFT}
+                      alt={g.title}
+                      referrerPolicy="no-referrer"
+                      className="h-full w-full object-cover"
+                    />
+
+                    <button
+                      onClick={() => toggleFav(id)}
+                      className={
+                        "absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full shadow-sm " +
+                        (isFav ? "bg-rose-500 text-white" : "bg-white/90 text-slate-700")
+                      }
+                      aria-label="Favoritar"
+                      title="Favoritar"
+                      type="button"
+                    >
+                      <span className="material-symbols-outlined text-[22px]">{isFav ? 'favorite' : 'favorite_border'}</span>
+                    </button>
+                  </div>
+
+                  <div className="px-1 pb-2 pt-3">
+                    <div className="line-clamp-2 text-base font-extrabold leading-tight text-slate-900">{g.title}</div>
+                    <div className="mt-1 text-2xl font-extrabold text-slate-900">{formatBRL(Number(g.price || 0))}</div>
+
+                    <Link
+                      href={`/presente/${id}?t=${encodeURIComponent(t)}`}
+                      className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-primary"
+                    >
+                      <span className="material-symbols-outlined">payments</span>
+                      Ver detalhes
+                    </Link>
+                  </div>
+                </div>
+              )
+            })}
+
+            {listToShow.length === 0 ? (
+              <div className="col-span-2 rounded-2xl bg-slate-50 px-4 py-6 text-center text-sm text-slate-600">
+                Nenhum presente encontrado.
+              </div>
             ) : null}
           </div>
         </div>
-
-        {/* Gift grid */}
-        <div className="mt-4 grid grid-cols-2 gap-4">
-          {filtered.map((g: any) => {
-            const isFav = favSet.has(String(g.id))
-            return (
-              <Link key={g.id} href={`/presente/${g.id}?d=${d}`} className="group">
-                <div className="relative rounded-3xl overflow-hidden bg-white shadow-soft border border-gray-100">
-                  <button
-                    onClick={(e) => {
-                      e.preventDefault()
-                      e.stopPropagation()
-                      toggleFav(String(g.id))
-                    }}
-                    style={{
-                      backgroundColor: isFav ? '#ef4444' : 'rgba(255,255,255,0.9)'
-                    }}
-                    className="absolute top-3 right-3 w-9 h-9 rounded-full flex items-center justify-center shadow-soft backdrop-blur transition"
-                    aria-label={isFav ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
-                  >
-                    <span className={isFav ? 'material-symbols-filled text-white' : 'material-symbols-outlined text-slate-500'}>
-                      favorite
-                    </span>
-                  </button>
-
-                  <img src={g.image} alt={g.title} className="w-full h-44 object-cover" />
-                </div>
-
-                <div className="mt-3">
-                  <p className="text-base font-semibold leading-snug">{g.title}</p>
-                  <p className="text-lg font-extrabold mt-1">{formatBRL(Number(g.price || 0))}</p>
-                  <div className="mt-2 flex items-center gap-2 text-primary font-semibold text-sm">
-                    <span className="material-symbols-outlined">arrow_forward</span>
-                    Ver detalhes
-                  </div>
-                </div>
-              </Link>
-            )
-          })}
-        </div>
-
-        {filtered.length === 0 ? <div className="mt-10 text-center text-slate-500">Nenhum presente encontrado.</div> : null}
       </div>
 
-      {/* Bottom nav: Presentes / Favoritos / Perfil */}
-      <nav className="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200/60">
-        <div className="mx-auto max-w-md px-6 py-3 flex items-center justify-around text-xs text-slate-500">
+      {/* bottom nav */}
+      <div className="fixed bottom-0 left-0 right-0 border-t border-slate-200 bg-white">
+        <div className="mx-auto flex max-w-md items-center justify-around px-4 py-3">
           <Link
-            className={`flex flex-col items-center gap-1 ${isPresentesActive ? 'text-primary font-semibold' : ''}`}
-            href={`/c?d=${d}`}
+            href={`/c?t=${encodeURIComponent(t)}`}
+            className={"flex flex-col items-center gap-1 text-xs font-semibold " + (tab !== 'favs' ? 'text-slate-900' : 'text-slate-400')}
           >
-            <span className="material-symbols-outlined">grid_view</span>
+            <span className="material-symbols-outlined">redeem</span>
             Presentes
           </Link>
 
           <Link
-            className={`flex flex-col items-center gap-1 ${isFavActive ? 'text-primary font-semibold' : ''}`}
-            href={`/c?d=${d}&tab=favs`}
+            href={`/c?t=${encodeURIComponent(t)}&tab=favs`}
+            className={"flex flex-col items-center gap-1 text-xs font-semibold " + (tab === 'favs' ? 'text-slate-900' : 'text-slate-400')}
           >
-            <span className={isFavActive ? 'material-symbols-filled text-primary' : 'material-symbols-outlined'}>
-              favorite
-            </span>
+            <span className="material-symbols-outlined">favorite</span>
             Favoritos
           </Link>
 
-          <Link className="flex flex-col items-center gap-1" href={`/perfil?d=${d}`}>
+          <Link
+            href={`/perfil?t=${encodeURIComponent(t)}`}
+            className="flex flex-col items-center gap-1 text-xs font-semibold text-slate-400"
+          >
             <span className="material-symbols-outlined">person</span>
             Perfil
           </Link>
         </div>
-      </nav>
+      </div>
+
+      {toast ? <Toast>{toast}</Toast> : null}
     </main>
   )
 }

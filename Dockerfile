@@ -1,21 +1,21 @@
-# ====== build ======
+# Build
 FROM node:20-alpine AS builder
 WORKDIR /app
-
-ENV NEXT_TELEMETRY_DISABLED=1
-# IMPORTANTE: não usar NODE_ENV=production aqui, senão devDependencies (tailwind) somem
-
-COPY package*.json ./
-RUN if [ -f package-lock.json ]; then npm ci; else npm install; fi
-
+COPY package.json package-lock.json* ./
+RUN npm ci --include=dev || npm install --include=dev
 COPY . .
 RUN npm run build
 
-# ====== runtime ======
-FROM nginx:alpine AS runner
+# Run (standalone)
+FROM node:20-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV PORT=3000
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/out /usr/share/nginx/html
+# standalone output
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
+COPY --from=builder /app/public ./public
 
-EXPOSE 80
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 3000
+CMD ["node", "server.js"]

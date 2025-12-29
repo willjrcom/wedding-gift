@@ -1,5 +1,7 @@
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  trailingSlash: true,
+  // Agora usamos Next como backend (SSR/API routes).
+  // Isso permite Mercado Pago + e-mails + token criptografado.
+  output: 'standalone'
 }
 module.exports = nextConfig

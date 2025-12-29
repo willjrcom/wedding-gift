@@ -1,38 +1,30 @@
-'use client'
-
-
 import Link from 'next/link'
+import type { ReactNode } from 'react'
 
 export default function TopBar({
   title,
-  backHref,
   right,
-  spacer = true
+  backHref
 }: {
   title: string
+  right?: ReactNode
   backHref?: string
-  right?: React.ReactNode
-  spacer?: boolean
 }) {
   return (
-    <header className="sticky top-0 z-30 w-full bg-background-light/95 backdrop-blur-md border-b border-gray-200/50">
-      <div className="mx-auto max-w-md px-4 py-3 flex items-center justify-between">
-        {backHref ? (
-          <Link
-            href={backHref}
-            className="w-10 h-10 rounded-full bg-white shadow-soft flex items-center justify-center active:scale-[0.98] transition"
-            aria-label="Voltar"
-          >
-            <span className="material-symbols-outlined">arrow_back_ios_new</span>
-          </Link>
-        ) : (
-          <div className="w-10" />
-        )}
+    <div className="sticky top-0 z-30 border-b border-slate-200 bg-white/95 backdrop-blur">
+      <div className="mx-auto flex max-w-md items-center justify-between px-4 py-3">
+        <div className="flex items-center gap-2">
+          {backHref ? (
+            <Link href={backHref} className="grid h-9 w-9 place-items-center rounded-xl bg-slate-100 text-slate-700">
+              <span className="material-symbols-outlined">arrow_back</span>
+            </Link>
+          ) : null}
 
-        <h1 className="text-lg font-bold tracking-tight">{title}</h1>
+          <div className="text-sm font-extrabold text-slate-900">{title}</div>
+        </div>
 
-        {right ? <div className="w-10 flex justify-end">{right}</div> : spacer ? <div className="w-10" /> : null}
+        <div>{right}</div>
       </div>
-    </header>
+    </div>
   )
 }

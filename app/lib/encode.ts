@@ -1,10 +1,6 @@
-
-export const encode = (d: any) => encodeURIComponent(JSON.stringify(d))
-
-export const decode = (t: string) => {
-  try {
-    return JSON.parse(decodeURIComponent(t))
-  } catch {
-    throw new Error('Link inválido ou antigo. Gere um novo link.')
-  }
+// Mantido só para compatibilidade com versões antigas.
+// Agora o projeto usa token criptografado (?t=...) e resolve via backend.
+export const encode = (_d: any) => ''
+export const decode = (_t: string) => {
+  throw new Error('Versão antiga. Gere um novo link.')
 }

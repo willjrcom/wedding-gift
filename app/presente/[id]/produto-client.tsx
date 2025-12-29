@@ -1,183 +1,167 @@
-
 'use client'
 
-import { useMemo, useState, useEffect } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useEffect, useMemo, useState } from 'react'
+import Link from 'next/link'
 import TopBar from '../../components/TopBar'
 import Toast from '../../components/Toast'
-import { decode } from '../../lib/encode'
 import { formatBRL } from '../../lib/format'
 import { readFavorites, writeFavorites } from '../../lib/favorites'
 
-export default function ProdutoClient({ gift }: { gift: any }) {
-  const d = useSearchParams().get('d')
-  const [showPix, setShowPix] = useState(false)
-  const [toast, setToast] = useState('')
-  const [favSet, setFavSet] = useState<Set<string>>(new Set())
+type Gift = {
+  id: string | number
+  title: string
+  price: number
+  description?: string
+  category?: string
+  image?: string
+}
 
-  const data: any = useMemo(() => {
-    if (!d) return null
-    return decode(d)
-  }, [d])
+const FALLBACK_GIFT =
+  'data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="400" height="400"><rect width="100%25" height="100%25" fill="%23f1f5f9"/><text x="50%25" y="52%25" dominant-baseline="middle" text-anchor="middle" fill="%2364758b" font-family="Arial" font-size="22">Presente</text></svg>'
+
+type CoupleData = {
+  coupleName: string
+  weddingDate: string
+  description: string
+  imageUrl: string
+  pixType?: string
+  pixKey?: string
+}
+
+export default function ProdutoClient({ gift, t }: { gift: Gift; t: string }) {
+
+  const [couple, setCouple] = useState<CoupleData | null>(null)
+  const [paid, setPaid] = useState(false)
+  const [toast, setToast] = useState<string | null>(null)
+  const [favorites, setFavorites] = useState<string[]>([])
 
   useEffect(() => {
-    setFavSet(new Set(readFavorites()))
+    setFavorites(readFavorites())
   }, [])
 
-  if (!d || !data) return null
-
-  const isFav = favSet.has(String(gift.id))
-
-  function flash(msg: string) {
-    setToast(msg)
-    window.clearTimeout((flash as any)._t)
-    ;(flash as any)._t = window.setTimeout(() => setToast(''), 1500)
-  }
-
-  function persist(next: Set<string>) {
-    setFavSet(next)
-    writeFavorites(Array.from(next))
-  }
-
-  function toggleFav() {
-    const next = new Set(favSet)
+  const isFav = favorites.includes(String(gift.id))
+  const toggleFav = () => {
     const id = String(gift.id)
-    if (next.has(id)) {
-      next.delete(id)
-      persist(next)
-      flash('Removido dos favoritos')
-      return
-    }
-    next.add(id)
-    persist(next)
-    flash('Adicionado aos favoritos')
+    const set = new Set(favorites)
+    set.has(id) ? set.delete(id) : set.add(id)
+    const next = Array.from(set)
+    setFavorites(next)
+    writeFavorites(next)
   }
+  const [err, setErr] = useState('')
 
-  async function copyPix() {
+  useEffect(() => {
+    const run = async () => {
+      if (!t) return
+      try {
+        const res = await fetch(`/api/list/resolve?t=${encodeURIComponent(t)}`)
+        const data = await res.json()
+        if (!res.ok) throw new Error(data?.error || 'Erro ao carregar lista')
+        setCouple(data.list.data)
+        setPaid(Boolean(data.list.paid))
+      } catch (e: any) {
+        setErr(e.message || 'Erro')
+      }
+    }
+    run()
+  }, [t])
+
+  const back = useMemo(() => (t ? `/c?t=${encodeURIComponent(t)}` : '/'), [t])
+
+  const copyPix = async () => {
+    if (!couple?.pixKey) return
     try {
-      await navigator.clipboard.writeText(String(data.pixKey || ''))
-      flash('Chave Pix copiada!')
+      await navigator.clipboard.writeText(couple.pixKey)
+      setToast('Pix copiado ✅')
+      setTimeout(() => setToast(null), 1400)
     } catch {
-      // silent
+      setToast('Não consegui copiar 😅')
+      setTimeout(() => setToast(null), 1400)
     }
   }
 
   return (
-    <main className="min-h-screen">
-      <TopBar
-        title="Detalhes"
-        backHref={`/c?d=${d}`}
-        right={
-          <button
-            onClick={toggleFav}
-            className="w-10 h-10 rounded-full bg-white shadow-soft flex items-center justify-center active:scale-[0.98] transition"
-            aria-label={isFav ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
-          >
-            <span className={isFav ? 'material-symbols-filled text-primary' : 'material-symbols-outlined text-slate-500'}>
-              favorite
-            </span>
-          </button>
-        }
-      />
+    <main className="min-h-screen bg-background-light">
+      <TopBar title="Presente" backHref={back} />
 
-      <Toast show={!!toast} text={toast} />
-
-      <div className="mx-auto max-w-md px-4 pb-32">
-        <div className="mt-4 rounded-[2.5rem] overflow-hidden bg-white shadow-soft border border-gray-100">
-          <img src={gift.image} alt={gift.title} className="w-full h-[420px] object-cover" />
-        </div>
-
-        <div className="flex justify-center gap-2 mt-3">
-          <span className="w-7 h-1.5 rounded-full bg-primary" />
-          <span className="w-2.5 h-1.5 rounded-full bg-gray-300" />
-          <span className="w-2.5 h-1.5 rounded-full bg-gray-300" />
-        </div>
-
-        <h1 className="mt-6 text-3xl font-extrabold leading-tight">{gift.title}</h1>
-
-        <div className="mt-3 flex items-center gap-3">
-          <div className="text-primary text-2xl font-extrabold">{formatBRL(Number(gift.price || 0))}</div>
-          <div className="rounded-full bg-green-100 text-green-900 px-3 py-2 text-sm font-bold flex items-center gap-2">
-            <span className="material-symbols-filled">payments</span>
-            PIX
-          </div>
-        </div>
-
-        <div className="mt-5 rounded-3xl bg-white shadow-soft border border-gray-100 p-4 flex items-center gap-3">
-          <div className="w-12 h-12 rounded-full overflow-hidden bg-gray-100 border border-gray-200">
+      <div className="mx-auto max-w-md px-4 pb-24 pt-6">
+        <div className="rounded-3xl bg-white p-5 shadow-card">
+          <div className="relative aspect-square w-full overflow-hidden rounded-3xl">
             <img
-              src={data.imageUrl || 'https://via.placeholder.com/200x200?text=%F0%9F%92%9C'}
-              alt="Casal"
-              className="w-full h-full object-cover"
+              src={gift.image || FALLBACK_GIFT}
+              alt={gift.title}
+              className="h-full w-full object-cover"
+              referrerPolicy="no-referrer"
             />
-          </div>
-          <div className="flex-1">
-            <div className="font-bold">{data.coupleName || 'Casal'}</div>
-            <div className="text-sm text-slate-600">Presente para o casamento</div>
-          </div>
-          <div className="w-11 h-11 rounded-full bg-primary/10 flex items-center justify-center">
-            <span className="material-symbols-outlined text-primary">chat</span>
-          </div>
-        </div>
-
-        <p className="mt-4 text-slate-700 leading-relaxed">
-          {gift.description || 'Um presente cheio de carinho para ajudar nessa nova fase.'}
-        </p>
-
-        <div className="mt-5 grid grid-cols-2 gap-4">
-          <div className="rounded-3xl bg-white border border-gray-100 shadow-soft p-4">
-            <div className="text-xs font-bold tracking-widest text-slate-400">TIPO PIX</div>
-            <div className="mt-2 font-semibold">{data.pixType || '-'}</div>
-          </div>
-          <div className="rounded-3xl bg-white border border-gray-100 shadow-soft p-4">
-            <div className="text-xs font-bold tracking-widest text-slate-400">ENTREGA</div>
-            <div className="mt-2 font-semibold">Imediata</div>
-          </div>
-        </div>
-      </div>
-
-      <div className="fixed bottom-0 left-0 right-0 bg-background-light/90 backdrop-blur-md border-t border-gray-200/60">
-        <div className="mx-auto max-w-md px-4 py-4 flex flex-col gap-3">
-          {!showPix ? (
             <button
-              onClick={() => setShowPix(true)}
-              className="w-full rounded-full bg-primary text-white py-4 font-bold shadow-soft flex items-center justify-center gap-2 active:scale-[0.99] transition"
+              type="button"
+              onClick={toggleFav}
+              aria-label={isFav ? 'Remover dos favoritos' : 'Adicionar aos favoritos'}
+              className={
+                'absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full shadow-sm ' +
+                (isFav ? 'bg-rose-600 text-white' : 'bg-white/90 text-slate-600')
+              }
             >
-              <span className="material-symbols-outlined">redeem</span>
-              Presentear
+              <span className="material-symbols-outlined text-2xl">favorite</span>
             </button>
-          ) : (
-            <>
-              <div className="rounded-2xl bg-white border border-gray-200 shadow-soft px-4 py-3 flex items-center gap-3">
-                <span className="material-symbols-outlined text-primary">key</span>
-                <div className="flex-1 font-mono text-sm text-slate-700 truncate">{String(data.pixKey || '')}</div>
+          </div>
+
+          <div className="text-sm font-extrabold text-slate-900">{gift.title}</div>
+          <div className="mt-1 text-xs font-semibold text-slate-500">{formatBRL(Number(gift.price || 0))}</div>
+
+          {gift.description ? <div className="mt-3 text-sm text-slate-600">{gift.description}</div> : null}
+          {gift.category ? <div className="mt-3 text-xs font-semibold text-slate-500">{gift.category}</div> : null}
+
+          <div className="mt-6 rounded-2xl border border-slate-100 p-4">
+            <div className="text-xs font-bold text-slate-700">Ver detalhes</div>
+
+            {!paid ? (
+              <div className="mt-2 text-sm text-amber-800">
+                Pix não ativado. O casal precisa ativar no Perfil.
+              </div>
+            ) : couple?.pixKey ? (
+              <>
+                <div className="mt-2 text-sm font-semibold text-slate-900">{couple.pixType}</div>
+                <div className="mt-1 break-all text-sm text-slate-700">{couple.pixKey}</div>
+
                 <button
                   onClick={copyPix}
-                  className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center"
-                  aria-label="Copiar"
+                  className="mt-3 flex w-full items-center justify-center gap-2 rounded-2xl bg-primary px-4 py-3 text-sm font-semibold text-white"
                 >
-                  <span className="material-symbols-outlined text-primary">content_copy</span>
+                  Copiar Pix
+                  <span className="material-symbols-outlined text-base">content_copy</span>
                 </button>
+              </>
+            ) : (
+              <div className="mt-2 text-sm text-slate-600">
+                Não consegui carregar o Pix. {err ? <span className="text-rose-700">{err}</span> : null}
               </div>
+            )}
 
-              <button
-                onClick={copyPix}
-                className="w-full rounded-full bg-primary text-white py-4 font-bold shadow-soft flex items-center justify-center gap-2 active:scale-[0.99] transition"
-              >
-                <span className="material-symbols-outlined">content_copy</span>
-                Copiar chave PIX
-              </button>
+            <div className="mt-3 text-xs text-slate-500">
+              Dica: após pagar, você pode mandar o comprovante pro casal no WhatsApp.
+            </div>
+          </div>
 
-              <button
-                onClick={() => setShowPix(false)}
-                className="w-full rounded-full bg-white text-primary py-4 font-bold border border-primary/30 shadow-soft active:scale-[0.99] transition"
-              >
-                Voltar
-              </button>
-            </>
-          )}
+          {couple?.coupleName ? (
+            <div className="mt-5 text-center text-xs text-slate-500">
+              Lista de <span className="font-semibold">{couple.coupleName}</span>
+            </div>
+          ) : null}
+
+          <div className="mt-4">
+            <Link
+              href={back}
+              className="flex items-center justify-center gap-2 rounded-2xl bg-slate-900 px-4 py-3 text-sm font-semibold text-white"
+            >
+              Voltar
+              <span className="material-symbols-outlined text-base">arrow_back</span>
+            </Link>
+          </div>
         </div>
       </div>
+
+      {toast ? <Toast>{toast}</Toast> : null}
     </main>
   )
 }

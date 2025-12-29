@@ -1,73 +1,88 @@
-'use client'
+type SelectOption = { value: string; label: string }
 
+type Props = {
+  label?: string
+  placeholder?: string
+  type?: string
+  icon?: string
+  value?: string
+  onChange?: (v: string) => void
+  as?: 'input' | 'textarea' | 'select'
+  options?: SelectOption[]
+  required?: boolean
+  name?: string
+  disabled?: boolean
+}
 
 export default function InputField({
   label,
   placeholder,
-  name,
   type = 'text',
   icon,
+  value,
+  onChange,
   as = 'input',
-  required
-}: {
-  label: string
-  placeholder?: string
-  name: string
-  type?: string
-  icon?: string
-  as?: 'input' | 'textarea' | 'select'
-  required?: boolean
-}) {
+  options = [],
+  required,
+  name,
+  disabled
+}: Props) {
+  const showLabel = (label ?? '').trim().length > 0
+
+  const baseClass =
+    'w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none focus:border-violet-400 focus:ring-4 focus:ring-violet-100'
+
+  const wrapClass =
+    'flex items-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 focus-within:border-violet-400 focus-within:ring-4 focus-within:ring-violet-100'
+
+  const controlProps = {
+    name,
+    disabled,
+    required,
+    value: value ?? '',
+    onChange: (e: any) => onChange?.(String(e.target.value))
+  }
+
   return (
-    <div className="flex flex-col gap-2">
-      <div className="flex items-baseline gap-2">
-        <label className="text-sm font-semibold text-slate-900">{label}</label>
-        {!required ? <span className="text-xs text-slate-500">(opcional)</span> : null}
-      </div>
+    <div className="grid gap-2">
+      {showLabel ? (
+        <div className="flex items-baseline justify-between">
+          <div className="text-sm font-semibold text-slate-700">{label}</div>
+          {!required ? <div className="text-xs font-semibold text-slate-400">(opcional)</div> : null}
+        </div>
+      ) : null}
 
-      <div className="relative">
-        {icon ? (
-          <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-slate-400">
-            {icon}
-          </span>
-        ) : null}
-
-        {as === 'textarea' ? (
-          <textarea
-            name={name}
-            placeholder={placeholder}
-            required={required}
-            className={`w-full min-h-[112px] rounded-2xl bg-white border border-gray-200 px-4 py-4 text-base outline-none focus:ring-2 focus:ring-primary/20 ${
-              icon ? 'pl-12' : ''
-            }`}
-          />
-        ) : as === 'select' ? (
-          <select
-            name={name}
-            required={required}
-            className={`w-full rounded-2xl bg-white border border-gray-200 px-4 py-4 text-base outline-none focus:ring-2 focus:ring-primary/20 ${
-              icon ? 'pl-12' : ''
-            }`}
-            defaultValue="CPF"
-          >
-            <option>CPF</option>
-            <option>CNPJ</option>
-            <option>Email</option>
-            <option>Telefone</option>
-            <option>Aleatória</option>
-          </select>
-        ) : (
-          <input
-            name={name}
-            type={type}
-            placeholder={placeholder}
-            required={required}
-            className={`w-full rounded-2xl bg-white border border-gray-200 px-4 py-4 text-base outline-none focus:ring-2 focus:ring-primary/20 ${
-              icon ? 'pl-12' : ''
-            }`}
-          />
-        )}
-      </div>
+      {as === 'select' ? (
+        <select className={baseClass} {...controlProps}>
+          {options.map(o => (
+            <option key={o.value} value={o.value}>
+              {o.label}
+            </option>
+          ))}
+        </select>
+      ) : icon ? (
+        <div className={wrapClass}>
+          <span className="material-symbols-outlined text-[22px] text-slate-500">{icon}</span>
+          {as === 'textarea' ? (
+            <textarea
+              className="min-h-[90px] w-full bg-transparent text-sm text-slate-900 outline-none"
+              placeholder={placeholder}
+              {...controlProps}
+            />
+          ) : (
+            <input
+              className="w-full bg-transparent text-sm text-slate-900 outline-none"
+              placeholder={placeholder}
+              type={type}
+              {...controlProps}
+            />
+          )}
+        </div>
+      ) : as === 'textarea' ? (
+        <textarea className={baseClass + ' min-h-[110px]'} placeholder={placeholder} {...controlProps} />
+      ) : (
+        <input className={baseClass} placeholder={placeholder} type={type} {...controlProps} />
+      )}
     </div>
   )
 }
