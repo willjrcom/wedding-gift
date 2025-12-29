@@ -218,7 +218,7 @@ export default function PerfilClient() {
         </div>
       </div>
 
-      {toast ? <Toast>{toast}</Toast> : null}
+      <Toast show={!!toast} text={toast ?? ''} />
     </main>
   )
 }
