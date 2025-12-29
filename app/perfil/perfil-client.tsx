@@ -68,17 +68,6 @@ export default function PerfilClient() {
     return url.toString()
   }, [t])
 
-  const weddingWhen = couple.ceremonyTime ? `${couple.weddingDate} às ${couple.ceremonyTime}` : couple.weddingDate
-  const hasEventDetails =
-    !!(
-      couple.ceremonyAddress ||
-      couple.partyAddress ||
-      couple.ceremonyMapUrl ||
-      couple.partyMapUrl ||
-      couple.dressCode ||
-      couple.partyTime
-    )
-
   const copy = async (text: string) => {
     try {
       await navigator.clipboard.writeText(text)
@@ -137,6 +126,18 @@ export default function PerfilClient() {
       </div>
     )
   }
+
+  // ✅ Só calcular depois do guard acima, porque `couple` começa como null.
+  const weddingWhen = couple.ceremonyTime ? `${couple.weddingDate} às ${couple.ceremonyTime}` : couple.weddingDate
+
+  const hasEventDetails = !!(
+    couple.ceremonyAddress ||
+    couple.partyAddress ||
+    couple.ceremonyMapUrl ||
+    couple.partyMapUrl ||
+    couple.dressCode ||
+    couple.partyTime
+  )
 
   return (
     <main className="min-h-screen bg-background-light">
@@ -211,7 +212,12 @@ export default function PerfilClient() {
           ) : null}
 
           <div className="mt-4 grid gap-3">
-            <div className={"rounded-2xl px-4 py-3 text-xs font-semibold " + (paid ? "bg-emerald-50 text-emerald-700" : "bg-amber-50 text-amber-800")}>
+            <div
+              className={
+                'rounded-2xl px-4 py-3 text-xs font-semibold ' +
+                (paid ? 'bg-emerald-50 text-emerald-700' : 'bg-amber-50 text-amber-800')
+              }
+            >
               {paid ? 'Pix ativado ✅ convidados já podem presentear' : 'Pix ainda não ativado'}
             </div>
 
@@ -225,9 +231,7 @@ export default function PerfilClient() {
                   <span className="material-symbols-outlined text-base">payments</span>
                 </button>
 
-                <div className="text-xs text-slate-500">
-                  Pagamento único. Sem taxas por presente.
-                </div>
+                <div className="text-xs text-slate-500">Pagamento único. Sem taxas por presente.</div>
 
                 {err ? (
                   <div className="rounded-2xl bg-rose-50 px-4 py-3 text-sm font-medium text-rose-700">{err}</div>
@@ -269,17 +273,26 @@ export default function PerfilClient() {
       {/* bottom nav */}
       <div className="fixed bottom-0 left-0 right-0 border-t border-slate-200 bg-white">
         <div className="mx-auto flex max-w-md items-center justify-around px-4 py-3">
-          <Link href={`/c?t=${encodeURIComponent(t)}`} className="flex flex-col items-center gap-1 text-xs font-semibold text-slate-400">
+          <Link
+            href={`/c?t=${encodeURIComponent(t)}`}
+            className="flex flex-col items-center gap-1 text-xs font-semibold text-slate-400"
+          >
             <span className="material-symbols-outlined">redeem</span>
             Presentes
           </Link>
 
-          <Link href={`/c?t=${encodeURIComponent(t)}&tab=favs`} className="flex flex-col items-center gap-1 text-xs font-semibold text-slate-400">
+          <Link
+            href={`/c?t=${encodeURIComponent(t)}&tab=favs`}
+            className="flex flex-col items-center gap-1 text-xs font-semibold text-slate-400"
+          >
             <span className="material-symbols-outlined">favorite</span>
             Favoritos
           </Link>
 
-          <Link href={`/perfil?t=${encodeURIComponent(t)}`} className="flex flex-col items-center gap-1 text-xs font-semibold text-slate-900">
+          <Link
+            href={`/perfil?t=${encodeURIComponent(t)}`}
+            className="flex flex-col items-center gap-1 text-xs font-semibold text-slate-900"
+          >
             <span className="material-symbols-outlined">person</span>
             Perfil
           </Link>

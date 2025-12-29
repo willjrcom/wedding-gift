@@ -232,7 +232,7 @@ export default function CasalClient() {
                       className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-primary"
                     >
                       <span className="material-symbols-outlined">payments</span>
-                      Presentear via Pix
+                      Ver detalhes
                     </Link>
                   </div>
                 </div>
