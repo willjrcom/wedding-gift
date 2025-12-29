@@ -27,7 +27,16 @@ export default function CriarPage() {
     pixType: 'CPF',
     pixKey: '',
     imageUrl: '',
-    email: ''
+    email: '',
+
+    // opcionais (informações do evento)
+    ceremonyAddress: '',
+    ceremonyMapUrl: '',
+    ceremonyTime: '',
+    partyAddress: '',
+    partyMapUrl: '',
+    partyTime: '',
+    dressCode: ''
   })
 
   const set = (k: string, v: string) => setForm(s => ({ ...s, [k]: v }))
@@ -73,7 +82,7 @@ export default function CriarPage() {
           </div>
 
           <div className="mt-4 grid gap-3">
-            <InputField label="Nome do casal" placeholder="Ex: Will e Duda" value={form.coupleName} onChange={v => set('coupleName', v)} />
+            <InputField label="Nome do casal" placeholder="Ex: João e Maria" value={form.coupleName} onChange={v => set('coupleName', v)} />
             <InputField label="Data do casamento" type="date" value={form.weddingDate} onChange={v => set('weddingDate', v)} />
             <InputField
               label="Mensagem"
@@ -88,6 +97,55 @@ export default function CriarPage() {
               value={form.email}
               onChange={v => set('email', v)}
               required
+            />
+
+            <div className="mt-2 text-xs font-bold text-slate-700">Detalhes do evento (opcional)</div>
+
+            <InputField
+              label="Hora da cerimônia"
+              type="time"
+              value={form.ceremonyTime}
+              onChange={v => set('ceremonyTime', v)}
+            />
+            <InputField
+              label="Endereço da cerimônia"
+              placeholder="Ex: Igreja X, Rua Y, 123"
+              value={form.ceremonyAddress}
+              onChange={v => set('ceremonyAddress', v)}
+            />
+            <InputField
+              label="Link do endereço da cerimônia"
+              type="url"
+              placeholder="Ex: https://maps.google.com/..."
+              value={form.ceremonyMapUrl}
+              onChange={v => set('ceremonyMapUrl', v)}
+            />
+
+            <InputField
+              label="Hora da festa"
+              type="time"
+              value={form.partyTime}
+              onChange={v => set('partyTime', v)}
+            />
+            <InputField
+              label="Endereço da festa"
+              placeholder="Ex: Buffet Z, Av. W, 999"
+              value={form.partyAddress}
+              onChange={v => set('partyAddress', v)}
+            />
+            <InputField
+              label="Link do endereço da festa"
+              type="url"
+              placeholder="Ex: https://maps.google.com/..."
+              value={form.partyMapUrl}
+              onChange={v => set('partyMapUrl', v)}
+            />
+
+            <InputField
+              label="Traje"
+              placeholder="Ex: esporte fino / social / casual"
+              value={form.dressCode}
+              onChange={v => set('dressCode', v)}
             />
 
             <div className="mt-2 text-xs font-bold text-slate-700">Pix</div>

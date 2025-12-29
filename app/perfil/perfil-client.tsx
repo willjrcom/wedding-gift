@@ -13,6 +13,15 @@ type CoupleData = {
   imageUrl: string
   pixType?: string
   pixKey?: string
+
+  // opcionais (informações do evento)
+  ceremonyAddress?: string
+  partyAddress?: string
+  ceremonyMapUrl?: string
+  partyMapUrl?: string
+  dressCode?: string
+  ceremonyTime?: string
+  partyTime?: string
 }
 
 const FALLBACK_AVATAR =
@@ -58,6 +67,17 @@ export default function PerfilClient() {
     url.searchParams.set('t', t)
     return url.toString()
   }, [t])
+
+  const weddingWhen = couple.ceremonyTime ? `${couple.weddingDate} às ${couple.ceremonyTime}` : couple.weddingDate
+  const hasEventDetails =
+    !!(
+      couple.ceremonyAddress ||
+      couple.partyAddress ||
+      couple.ceremonyMapUrl ||
+      couple.partyMapUrl ||
+      couple.dressCode ||
+      couple.partyTime
+    )
 
   const copy = async (text: string) => {
     try {
@@ -137,10 +157,58 @@ export default function PerfilClient() {
 
             <div className="min-w-0">
               <div className="truncate text-base font-extrabold text-slate-900">{couple.coupleName}</div>
-              <div className="mt-0.5 text-xs font-semibold text-slate-500">{couple.weddingDate}</div>
+              <div className="mt-0.5 text-xs font-semibold text-slate-500">Data do casamento: {weddingWhen}</div>
               <div className="mt-2 line-clamp-2 text-sm text-slate-600">{couple.description}</div>
+
+              {couple.dressCode ? (
+                <div className="mt-2 text-xs font-medium text-slate-600">
+                  Traje: <span className="font-semibold text-slate-700">{couple.dressCode}</span>
+                </div>
+              ) : null}
             </div>
           </div>
+
+          {hasEventDetails ? (
+            <div className="mt-4 rounded-2xl bg-slate-50 p-4">
+              <div className="text-xs font-bold text-slate-700">Detalhes do evento</div>
+
+              {couple.ceremonyAddress || couple.ceremonyTime || couple.ceremonyMapUrl ? (
+                <div className="mt-2 text-xs text-slate-700">
+                  <div className="font-semibold text-slate-800">Cerimônia</div>
+                  {couple.ceremonyTime ? <div>Hora: {couple.ceremonyTime}</div> : null}
+                  {couple.ceremonyAddress ? <div>Endereço: {couple.ceremonyAddress}</div> : null}
+                  {couple.ceremonyMapUrl ? (
+                    <a
+                      href={couple.ceremonyMapUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-1 inline-block font-semibold text-primary"
+                    >
+                      Abrir no mapa
+                    </a>
+                  ) : null}
+                </div>
+              ) : null}
+
+              {couple.partyAddress || couple.partyTime || couple.partyMapUrl ? (
+                <div className="mt-3 text-xs text-slate-700">
+                  <div className="font-semibold text-slate-800">Festa</div>
+                  {couple.partyTime ? <div>Hora: {couple.partyTime}</div> : null}
+                  {couple.partyAddress ? <div>Endereço: {couple.partyAddress}</div> : null}
+                  {couple.partyMapUrl ? (
+                    <a
+                      href={couple.partyMapUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-1 inline-block font-semibold text-primary"
+                    >
+                      Abrir no mapa
+                    </a>
+                  ) : null}
+                </div>
+              ) : null}
+            </div>
+          ) : null}
 
           <div className="mt-4 grid gap-3">
             <div className={"rounded-2xl px-4 py-3 text-xs font-semibold " + (paid ? "bg-emerald-50 text-emerald-700" : "bg-amber-50 text-amber-800")}>

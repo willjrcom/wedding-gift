@@ -17,6 +17,15 @@ type CoupleData = {
   imageUrl: string
   pixType?: string
   pixKey?: string
+
+  // opcionais (informações do evento)
+  ceremonyAddress?: string
+  partyAddress?: string
+  ceremonyMapUrl?: string
+  partyMapUrl?: string
+  dressCode?: string
+  ceremonyTime?: string
+  partyTime?: string
 }
 
 const FALLBACK_AVATAR =

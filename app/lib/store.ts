@@ -10,6 +10,15 @@ export type ListData = {
   pixKey: string
   imageUrl: string
   email: string
+
+  // ===== Campos opcionais (informações do evento) =====
+  ceremonyAddress?: string
+  partyAddress?: string
+  ceremonyMapUrl?: string
+  partyMapUrl?: string
+  dressCode?: string
+  ceremonyTime?: string
+  partyTime?: string
 }
 
 export type StoredList = {

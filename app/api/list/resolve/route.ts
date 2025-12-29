@@ -24,6 +24,16 @@ export async function GET(req: Request) {
         weddingDate: list.data.weddingDate,
         description: list.data.description,
         imageUrl: list.data.imageUrl,
+
+        // opcionais (informações do evento)
+        ceremonyAddress: list.data.ceremonyAddress || '',
+        partyAddress: list.data.partyAddress || '',
+        ceremonyMapUrl: list.data.ceremonyMapUrl || '',
+        partyMapUrl: list.data.partyMapUrl || '',
+        dressCode: list.data.dressCode || '',
+        ceremonyTime: list.data.ceremonyTime || '',
+        partyTime: list.data.partyTime || '',
+
         // só libera após pagamento
         pixType: list.paid ? list.data.pixType : '',
         pixKey: list.paid ? list.data.pixKey : ''

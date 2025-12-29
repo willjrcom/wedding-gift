@@ -14,7 +14,16 @@ export async function POST(req: Request) {
       pixType: String(body.pixType || '').trim(),
       pixKey: String(body.pixKey || '').trim(),
       imageUrl: String(body.imageUrl || '').trim(),
-      email: String(body.email || '').trim()
+      email: String(body.email || '').trim(),
+
+      // opcionais (informações do evento)
+      ceremonyAddress: String(body.ceremonyAddress || '').trim(),
+      partyAddress: String(body.partyAddress || '').trim(),
+      ceremonyMapUrl: String(body.ceremonyMapUrl || '').trim(),
+      partyMapUrl: String(body.partyMapUrl || '').trim(),
+      dressCode: String(body.dressCode || '').trim(),
+      ceremonyTime: String(body.ceremonyTime || '').trim(),
+      partyTime: String(body.partyTime || '').trim()
     }
 
     // Validações (na ordem solicitada)
