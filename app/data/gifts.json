@@ -1,44 +1,702 @@
 [
   {
-    "id": "jantar",
-    "title": "Jantar romântico",
-    "price": 180,
-    "image": "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=1200&q=80",
-    "description": "Um jantar especial para começar a vida a dois com boas memórias."
+    "id": "air-fryer",
+    "title": "Air fryer",
+    "price": 399,
+    "image": "https://source.unsplash.com/1200x1200/?air-fryer%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: air fryer."
   },
   {
-    "id": "lua-de-mel",
-    "title": "Lua de mel",
+    "id": "liquidificador",
+    "title": "Liquidificador",
+    "price": 259,
+    "image": "https://source.unsplash.com/1200x1200/?blender%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: liquidificador."
+  },
+  {
+    "id": "batedeira",
+    "title": "Batedeira",
+    "price": 349,
+    "image": "https://source.unsplash.com/1200x1200/?stand-mixer%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: batedeira."
+  },
+  {
+    "id": "mixer",
+    "title": "Mixer",
+    "price": 199,
+    "image": "https://source.unsplash.com/1200x1200/?hand-blender%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: mixer."
+  },
+  {
+    "id": "processador-de-alimentos",
+    "title": "Processador de alimentos",
+    "price": 379,
+    "image": "https://source.unsplash.com/1200x1200/?food-processor%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: processador de alimentos."
+  },
+  {
+    "id": "cafeteira-elétrica",
+    "title": "Cafeteira elétrica",
+    "price": 299,
+    "image": "https://source.unsplash.com/1200x1200/?coffee-maker%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: cafeteira elétrica."
+  },
+  {
+    "id": "cafeteira-italiana-moka",
+    "title": "Cafeteira italiana (moka)",
+    "price": 129,
+    "image": "https://source.unsplash.com/1200x1200/?moka%2Ccoffee",
+    "description": "Presente popular para ajudar o casal: cafeteira italiana (moka)."
+  },
+  {
+    "id": "chaleira-elétrica",
+    "title": "Chaleira elétrica",
+    "price": 179,
+    "image": "https://source.unsplash.com/1200x1200/?electric-kettle%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: chaleira elétrica."
+  },
+  {
+    "id": "torradeira",
+    "title": "Torradeira",
+    "price": 169,
+    "image": "https://source.unsplash.com/1200x1200/?toaster%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: torradeira."
+  },
+  {
+    "id": "sanduicheiragrill",
+    "title": "Sanduicheira/grill",
+    "price": 189,
+    "image": "https://source.unsplash.com/1200x1200/?panini-press%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: sanduicheira/grill."
+  },
+  {
+    "id": "micro-ondas-ajuda-na-compra",
+    "title": "Micro-ondas (ajuda na compra)",
+    "price": 450,
+    "image": "https://source.unsplash.com/1200x1200/?microwave%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: micro-ondas (ajuda na compra)."
+  },
+  {
+    "id": "panela-de-pressão",
+    "title": "Panela de pressão",
+    "price": 219,
+    "image": "https://source.unsplash.com/1200x1200/?pressure-cooker%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: panela de pressão."
+  },
+  {
+    "id": "panela-elétrica-de-arroz",
+    "title": "Panela elétrica de arroz",
+    "price": 199,
+    "image": "https://source.unsplash.com/1200x1200/?rice-cooker%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: panela elétrica de arroz."
+  },
+  {
+    "id": "panela-elétrica-multifunções",
+    "title": "Panela elétrica multifunções",
+    "price": 399,
+    "image": "https://source.unsplash.com/1200x1200/?multi-cooker%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: panela elétrica multifunções."
+  },
+  {
+    "id": "conjunto-de-panelas-antiaderentes",
+    "title": "Conjunto de panelas antiaderentes",
+    "price": 499,
+    "image": "https://source.unsplash.com/1200x1200/?cookware%2Cpots",
+    "description": "Presente popular para ajudar o casal: conjunto de panelas antiaderentes."
+  },
+  {
+    "id": "conjunto-de-panelas-inox",
+    "title": "Conjunto de panelas inox",
+    "price": 699,
+    "image": "https://source.unsplash.com/1200x1200/?stainless%2Ccookware",
+    "description": "Presente popular para ajudar o casal: conjunto de panelas inox."
+  },
+  {
+    "id": "frigideira-boa",
+    "title": "Frigideira (boa)",
+    "price": 189,
+    "image": "https://source.unsplash.com/1200x1200/?frying-pan%2Ccookware",
+    "description": "Presente popular para ajudar o casal: frigideira (boa)."
+  },
+  {
+    "id": "panela-wok",
+    "title": "Panela wok",
+    "price": 179,
+    "image": "https://source.unsplash.com/1200x1200/?wok%2Ccookware",
+    "description": "Presente popular para ajudar o casal: panela wok."
+  },
+  {
+    "id": "panela-de-ferro-dutch-oven",
+    "title": "Panela de ferro (dutch oven)",
+    "price": 499,
+    "image": "https://source.unsplash.com/1200x1200/?dutch-oven%2Ccookware",
+    "description": "Presente popular para ajudar o casal: panela de ferro (dutch oven)."
+  },
+  {
+    "id": "assadeiras-kit",
+    "title": "Assadeiras (kit)",
+    "price": 159,
+    "image": "https://source.unsplash.com/1200x1200/?baking-tray%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: assadeiras (kit)."
+  },
+  {
+    "id": "formas-de-bolo-kit",
+    "title": "Formas de bolo (kit)",
+    "price": 129,
+    "image": "https://source.unsplash.com/1200x1200/?cake-pan%2Cbaking",
+    "description": "Presente popular para ajudar o casal: formas de bolo (kit)."
+  },
+  {
+    "id": "conjunto-de-facas",
+    "title": "Conjunto de facas",
+    "price": 299,
+    "image": "https://source.unsplash.com/1200x1200/?kitchen-knives",
+    "description": "Presente popular para ajudar o casal: conjunto de facas."
+  },
+  {
+    "id": "afiador-de-facas",
+    "title": "Afiador de facas",
+    "price": 89,
+    "image": "https://source.unsplash.com/1200x1200/?knife-sharpener",
+    "description": "Presente popular para ajudar o casal: afiador de facas."
+  },
+  {
+    "id": "tábua-de-corte-bambu",
+    "title": "Tábua de corte (bambu)",
+    "price": 99,
+    "image": "https://source.unsplash.com/1200x1200/?cutting-board",
+    "description": "Presente popular para ajudar o casal: tábua de corte (bambu)."
+  },
+  {
+    "id": "kit-de-utensílios-de-silicone",
+    "title": "Kit de utensílios de silicone",
+    "price": 119,
+    "image": "https://source.unsplash.com/1200x1200/?kitchen-utensils",
+    "description": "Presente popular para ajudar o casal: kit de utensílios de silicone."
+  },
+  {
+    "id": "conchas-e-espátulas-kit",
+    "title": "Conchas e espátulas (kit)",
+    "price": 89,
+    "image": "https://source.unsplash.com/1200x1200/?spatula%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: conchas e espátulas (kit)."
+  },
+  {
+    "id": "ralador-multiuso",
+    "title": "Ralador multiuso",
+    "price": 59,
+    "image": "https://source.unsplash.com/1200x1200/?grater%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: ralador multiuso."
+  },
+  {
+    "id": "descascador-de-legumes",
+    "title": "Descascador de legumes",
+    "price": 39,
+    "image": "https://source.unsplash.com/1200x1200/?peeler%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: descascador de legumes."
+  },
+  {
+    "id": "abridor-de-vinho",
+    "title": "Abridor de vinho",
+    "price": 99,
+    "image": "https://source.unsplash.com/1200x1200/?wine-opener",
+    "description": "Presente popular para ajudar o casal: abridor de vinho."
+  },
+  {
+    "id": "jogo-de-taças-de-vinho",
+    "title": "Jogo de taças de vinho",
+    "price": 179,
+    "image": "https://source.unsplash.com/1200x1200/?wine-glasses",
+    "description": "Presente popular para ajudar o casal: jogo de taças de vinho."
+  },
+  {
+    "id": "jogo-de-copos-kit",
+    "title": "Jogo de copos (kit)",
+    "price": 129,
+    "image": "https://source.unsplash.com/1200x1200/?drinking-glasses",
+    "description": "Presente popular para ajudar o casal: jogo de copos (kit)."
+  },
+  {
+    "id": "jogo-de-xícaras-de-café",
+    "title": "Jogo de xícaras de café",
+    "price": 139,
+    "image": "https://source.unsplash.com/1200x1200/?coffee-cups",
+    "description": "Presente popular para ajudar o casal: jogo de xícaras de café."
+  },
+  {
+    "id": "aparelho-de-jantar-kit",
+    "title": "Aparelho de jantar (kit)",
+    "price": 399,
+    "image": "https://source.unsplash.com/1200x1200/?dinnerware",
+    "description": "Presente popular para ajudar o casal: aparelho de jantar (kit)."
+  },
+  {
+    "id": "jogo-de-talheres",
+    "title": "Jogo de talheres",
+    "price": 229,
+    "image": "https://source.unsplash.com/1200x1200/?cutlery",
+    "description": "Presente popular para ajudar o casal: jogo de talheres."
+  },
+  {
+    "id": "travessas-para-servir",
+    "title": "Travessas para servir",
+    "price": 159,
+    "image": "https://source.unsplash.com/1200x1200/?serveware",
+    "description": "Presente popular para ajudar o casal: travessas para servir."
+  },
+  {
+    "id": "tigelas-kit",
+    "title": "Tigelas (kit)",
+    "price": 129,
+    "image": "https://source.unsplash.com/1200x1200/?bowls%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: tigelas (kit)."
+  },
+  {
+    "id": "potes-herméticos-kit",
+    "title": "Potes herméticos (kit)",
+    "price": 139,
+    "image": "https://source.unsplash.com/1200x1200/?storage-containers",
+    "description": "Presente popular para ajudar o casal: potes herméticos (kit)."
+  },
+  {
+    "id": "jogo-de-panelas-para-fondue",
+    "title": "Jogo de panelas para fondue",
+    "price": 199,
+    "image": "https://source.unsplash.com/1200x1200/?fondue",
+    "description": "Presente popular para ajudar o casal: jogo de panelas para fondue."
+  },
+  {
+    "id": "conjunto-de-potes-de-vidro",
+    "title": "Conjunto de potes de vidro",
+    "price": 129,
+    "image": "https://source.unsplash.com/1200x1200/?glass-containers",
+    "description": "Presente popular para ajudar o casal: conjunto de potes de vidro."
+  },
+  {
+    "id": "jarrafiltro-de-água",
+    "title": "Jarra/filtro de água",
+    "price": 149,
+    "image": "https://source.unsplash.com/1200x1200/?water-filter%2Cpitcher",
+    "description": "Presente popular para ajudar o casal: jarra/filtro de água."
+  },
+  {
+    "id": "filtro-de-água-ajuda-na-compra",
+    "title": "Filtro de água (ajuda na compra)",
     "price": 350,
-    "image": "https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1200&q=80",
-    "description": "Ajuda a montar a viagem dos sonhos e viver esse momento em grande estilo."
+    "image": "https://source.unsplash.com/1200x1200/?water-filter%2Ckitchen",
+    "description": "Presente popular para ajudar o casal: filtro de água (ajuda na compra)."
   },
   {
-    "id": "cama",
-    "title": "Jogo de cama",
-    "price": 220,
-    "image": "https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&w=1200&q=80",
-    "description": "Conforto e aconchego para o novo lar."
+    "id": "aspirador-de-pó",
+    "title": "Aspirador de pó",
+    "price": 399,
+    "image": "https://source.unsplash.com/1200x1200/?vacuum%2Chome",
+    "description": "Presente popular para ajudar o casal: aspirador de pó."
   },
   {
-    "id": "panelas",
-    "title": "Conjunto de panelas",
-    "price": 260,
-    "image": "https://images.unsplash.com/photo-1585338107529-13afc5f02586?auto=format&fit=crop&w=1200&q=80",
-    "description": "Para muitas receitas e histórias compartilhadas na cozinha."
+    "id": "robô-aspirador-cota",
+    "title": "Robô aspirador (cota)",
+    "price": 450,
+    "image": "https://source.unsplash.com/1200x1200/?robot-vacuum",
+    "description": "Presente popular para ajudar o casal: robô aspirador (cota)."
   },
   {
-    "id": "cafeteira",
-    "title": "Cafeteira",
-    "price": 190,
-    "image": "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=1200&q=80",
-    "description": "Começar o dia com café e carinho."
+    "id": "ferro-de-passar",
+    "title": "Ferro de passar",
+    "price": 179,
+    "image": "https://source.unsplash.com/1200x1200/?iron%2Claundry",
+    "description": "Presente popular para ajudar o casal: ferro de passar."
   },
   {
-    "id": "decor",
-    "title": "Decoração do lar",
-    "price": 140,
-    "image": "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80",
-    "description": "Detalhes que deixam a casa com a cara do casal."
+    "id": "tábua-de-passar",
+    "title": "Tábua de passar",
+    "price": 149,
+    "image": "https://source.unsplash.com/1200x1200/?ironing-board",
+    "description": "Presente popular para ajudar o casal: tábua de passar."
+  },
+  {
+    "id": "varal-de-chão",
+    "title": "Varal de chão",
+    "price": 119,
+    "image": "https://source.unsplash.com/1200x1200/?clothesline",
+    "description": "Presente popular para ajudar o casal: varal de chão."
+  },
+  {
+    "id": "kit-de-limpeza-vassourarodo",
+    "title": "Kit de limpeza (vassoura/rodo)",
+    "price": 99,
+    "image": "https://source.unsplash.com/1200x1200/?cleaning-supplies",
+    "description": "Presente popular para ajudar o casal: kit de limpeza (vassoura/rodo)."
+  },
+  {
+    "id": "balde-mop",
+    "title": "Balde mop",
+    "price": 159,
+    "image": "https://source.unsplash.com/1200x1200/?mop%2Ccleaning",
+    "description": "Presente popular para ajudar o casal: balde mop."
+  },
+  {
+    "id": "jogo-de-toalhas-de-banho",
+    "title": "Jogo de toalhas de banho",
+    "price": 199,
+    "image": "https://source.unsplash.com/1200x1200/?bath-towels",
+    "description": "Presente popular para ajudar o casal: jogo de toalhas de banho."
+  },
+  {
+    "id": "toalhas-de-rosto-kit",
+    "title": "Toalhas de rosto (kit)",
+    "price": 89,
+    "image": "https://source.unsplash.com/1200x1200/?face-towels",
+    "description": "Presente popular para ajudar o casal: toalhas de rosto (kit)."
+  },
+  {
+    "id": "roupões-par",
+    "title": "Roupões (par)",
+    "price": 219,
+    "image": "https://source.unsplash.com/1200x1200/?bathrobe",
+    "description": "Presente popular para ajudar o casal: roupões (par)."
+  },
+  {
+    "id": "tapete-de-banheiro",
+    "title": "Tapete de banheiro",
+    "price": 79,
+    "image": "https://source.unsplash.com/1200x1200/?bath-mat",
+    "description": "Presente popular para ajudar o casal: tapete de banheiro."
+  },
+  {
+    "id": "kit-acessórios-banheiro",
+    "title": "Kit acessórios banheiro",
+    "price": 89,
+    "image": "https://source.unsplash.com/1200x1200/?bathroom-accessories",
+    "description": "Presente popular para ajudar o casal: kit acessórios banheiro."
+  },
+  {
+    "id": "jogo-de-cama-casal",
+    "title": "Jogo de cama casal",
+    "price": 299,
+    "image": "https://source.unsplash.com/1200x1200/?bedsheets",
+    "description": "Presente popular para ajudar o casal: jogo de cama casal."
+  },
+  {
+    "id": "jogo-de-cama-queen",
+    "title": "Jogo de cama queen",
+    "price": 349,
+    "image": "https://source.unsplash.com/1200x1200/?bed-linen",
+    "description": "Presente popular para ajudar o casal: jogo de cama queen."
+  },
+  {
+    "id": "edredom",
+    "title": "Edredom",
+    "price": 279,
+    "image": "https://source.unsplash.com/1200x1200/?comforter%2Cbed",
+    "description": "Presente popular para ajudar o casal: edredom."
+  },
+  {
+    "id": "cobertormanta",
+    "title": "Cobertor/manta",
+    "price": 169,
+    "image": "https://source.unsplash.com/1200x1200/?blanket",
+    "description": "Presente popular para ajudar o casal: cobertor/manta."
+  },
+  {
+    "id": "travesseiros-par",
+    "title": "Travesseiros (par)",
+    "price": 149,
+    "image": "https://source.unsplash.com/1200x1200/?pillows",
+    "description": "Presente popular para ajudar o casal: travesseiros (par)."
+  },
+  {
+    "id": "protetor-de-colchão",
+    "title": "Protetor de colchão",
+    "price": 129,
+    "image": "https://source.unsplash.com/1200x1200/?mattress-protector",
+    "description": "Presente popular para ajudar o casal: protetor de colchão."
+  },
+  {
+    "id": "cortinas",
+    "title": "Cortinas",
+    "price": 249,
+    "image": "https://source.unsplash.com/1200x1200/?curtains",
+    "description": "Presente popular para ajudar o casal: cortinas."
+  },
+  {
+    "id": "almofadas-decorativas",
+    "title": "Almofadas decorativas",
+    "price": 129,
+    "image": "https://source.unsplash.com/1200x1200/?decor-pillows",
+    "description": "Presente popular para ajudar o casal: almofadas decorativas."
+  },
+  {
+    "id": "jogo-americano-kit",
+    "title": "Jogo americano (kit)",
+    "price": 99,
+    "image": "https://source.unsplash.com/1200x1200/?placemats",
+    "description": "Presente popular para ajudar o casal: jogo americano (kit)."
+  },
+  {
+    "id": "toalha-de-mesa",
+    "title": "Toalha de mesa",
+    "price": 119,
+    "image": "https://source.unsplash.com/1200x1200/?tablecloth",
+    "description": "Presente popular para ajudar o casal: toalha de mesa."
+  },
+  {
+    "id": "guardanapos-kit",
+    "title": "Guardanapos (kit)",
+    "price": 79,
+    "image": "https://source.unsplash.com/1200x1200/?napkins",
+    "description": "Presente popular para ajudar o casal: guardanapos (kit)."
+  },
+  {
+    "id": "panos-de-prato-kit",
+    "title": "Panos de prato (kit)",
+    "price": 59,
+    "image": "https://source.unsplash.com/1200x1200/?kitchen-towels",
+    "description": "Presente popular para ajudar o casal: panos de prato (kit)."
+  },
+  {
+    "id": "potes-organizadores-geladeira",
+    "title": "Potes organizadores geladeira",
+    "price": 89,
+    "image": "https://source.unsplash.com/1200x1200/?fridge-organizer",
+    "description": "Presente popular para ajudar o casal: potes organizadores geladeira."
+  },
+  {
+    "id": "organizador-de-temperos",
+    "title": "Organizador de temperos",
+    "price": 99,
+    "image": "https://source.unsplash.com/1200x1200/?spice-rack",
+    "description": "Presente popular para ajudar o casal: organizador de temperos."
+  },
+  {
+    "id": "moedor-de-pimentasal",
+    "title": "Moedor de pimenta/sal",
+    "price": 89,
+    "image": "https://source.unsplash.com/1200x1200/?pepper-mill",
+    "description": "Presente popular para ajudar o casal: moedor de pimenta/sal."
+  },
+  {
+    "id": "balança-de-cozinha",
+    "title": "Balança de cozinha",
+    "price": 99,
+    "image": "https://source.unsplash.com/1200x1200/?kitchen-scale",
+    "description": "Presente popular para ajudar o casal: balança de cozinha."
+  },
+  {
+    "id": "termômetro-culinário",
+    "title": "Termômetro culinário",
+    "price": 79,
+    "image": "https://source.unsplash.com/1200x1200/?cooking-thermometer",
+    "description": "Presente popular para ajudar o casal: termômetro culinário."
+  },
+  {
+    "id": "forma-de-pãobolo-inglês",
+    "title": "Forma de pão/bolo inglês",
+    "price": 69,
+    "image": "https://source.unsplash.com/1200x1200/?loaf-pan",
+    "description": "Presente popular para ajudar o casal: forma de pão/bolo inglês."
+  },
+  {
+    "id": "frigideira-para-panqueca",
+    "title": "Frigideira para panqueca",
+    "price": 99,
+    "image": "https://source.unsplash.com/1200x1200/?pancake-pan",
+    "description": "Presente popular para ajudar o casal: frigideira para panqueca."
+  },
+  {
+    "id": "waffle-maker",
+    "title": "Waffle maker",
+    "price": 199,
+    "image": "https://source.unsplash.com/1200x1200/?waffle-maker",
+    "description": "Presente popular para ajudar o casal: waffle maker."
+  },
+  {
+    "id": "panela-de-pipoca",
+    "title": "Panela de pipoca",
+    "price": 119,
+    "image": "https://source.unsplash.com/1200x1200/?popcorn",
+    "description": "Presente popular para ajudar o casal: panela de pipoca."
+  },
+  {
+    "id": "kit-churrasco",
+    "title": "Kit churrasco",
+    "price": 199,
+    "image": "https://source.unsplash.com/1200x1200/?bbq-tools",
+    "description": "Presente popular para ajudar o casal: kit churrasco."
+  },
+  {
+    "id": "jogo-de-pratos-sobremesa",
+    "title": "Jogo de pratos sobremesa",
+    "price": 129,
+    "image": "https://source.unsplash.com/1200x1200/?dessert-plates",
+    "description": "Presente popular para ajudar o casal: jogo de pratos sobremesa."
+  },
+  {
+    "id": "taças-para-drinks",
+    "title": "Taças para drinks",
+    "price": 159,
+    "image": "https://source.unsplash.com/1200x1200/?cocktail-glasses",
+    "description": "Presente popular para ajudar o casal: taças para drinks."
+  },
+  {
+    "id": "coqueteleira",
+    "title": "Coqueteleira",
+    "price": 99,
+    "image": "https://source.unsplash.com/1200x1200/?cocktail-shaker",
+    "description": "Presente popular para ajudar o casal: coqueteleira."
+  },
+  {
+    "id": "kit-bar-dosadorcolher",
+    "title": "Kit bar (dosador/colher)",
+    "price": 89,
+    "image": "https://source.unsplash.com/1200x1200/?bar-tools",
+    "description": "Presente popular para ajudar o casal: kit bar (dosador/colher)."
+  },
+  {
+    "id": "balde-de-gelo",
+    "title": "Balde de gelo",
+    "price": 79,
+    "image": "https://source.unsplash.com/1200x1200/?ice-bucket",
+    "description": "Presente popular para ajudar o casal: balde de gelo."
+  },
+  {
+    "id": "fruteira",
+    "title": "Fruteira",
+    "price": 89,
+    "image": "https://source.unsplash.com/1200x1200/?fruit-bowl",
+    "description": "Presente popular para ajudar o casal: fruteira."
+  },
+  {
+    "id": "porta-temperos",
+    "title": "Porta-temperos",
+    "price": 69,
+    "image": "https://source.unsplash.com/1200x1200/?spice-jars",
+    "description": "Presente popular para ajudar o casal: porta-temperos."
+  },
+  {
+    "id": "kit-de-potes-para-freezer",
+    "title": "Kit de potes para freezer",
+    "price": 99,
+    "image": "https://source.unsplash.com/1200x1200/?freezer-containers",
+    "description": "Presente popular para ajudar o casal: kit de potes para freezer."
+  },
+  {
+    "id": "assento-sanitário-soft-close",
+    "title": "Assento sanitário soft close",
+    "price": 129,
+    "image": "https://source.unsplash.com/1200x1200/?toilet-seat",
+    "description": "Presente popular para ajudar o casal: assento sanitário soft close."
+  },
+  {
+    "id": "lixeira-inox",
+    "title": "Lixeira inox",
+    "price": 139,
+    "image": "https://source.unsplash.com/1200x1200/?trash-can",
+    "description": "Presente popular para ajudar o casal: lixeira inox."
+  },
+  {
+    "id": "kit-de-velas-aromáticas",
+    "title": "Kit de velas aromáticas",
+    "price": 129,
+    "image": "https://source.unsplash.com/1200x1200/?scented-candles",
+    "description": "Presente popular para ajudar o casal: kit de velas aromáticas."
+  },
+  {
+    "id": "difusor-de-aromas",
+    "title": "Difusor de aromas",
+    "price": 119,
+    "image": "https://source.unsplash.com/1200x1200/?diffuser",
+    "description": "Presente popular para ajudar o casal: difusor de aromas."
+  },
+  {
+    "id": "plantasvasos-decorativos",
+    "title": "Plantas/vasos decorativos",
+    "price": 149,
+    "image": "https://source.unsplash.com/1200x1200/?houseplants",
+    "description": "Presente popular para ajudar o casal: plantas/vasos decorativos."
+  },
+  {
+    "id": "quadroarte-para-parede",
+    "title": "Quadro/arte para parede",
+    "price": 199,
+    "image": "https://source.unsplash.com/1200x1200/?wall-art",
+    "description": "Presente popular para ajudar o casal: quadro/arte para parede."
+  },
+  {
+    "id": "espelho-decorativo",
+    "title": "Espelho decorativo",
+    "price": 249,
+    "image": "https://source.unsplash.com/1200x1200/?mirror%2Cdecor",
+    "description": "Presente popular para ajudar o casal: espelho decorativo."
+  },
+  {
+    "id": "abajur",
+    "title": "Abajur",
+    "price": 179,
+    "image": "https://source.unsplash.com/1200x1200/?lamp%2Chome",
+    "description": "Presente popular para ajudar o casal: abajur."
+  },
+  {
+    "id": "jogo-de-lençol-extra",
+    "title": "Jogo de lençol extra",
+    "price": 229,
+    "image": "https://source.unsplash.com/1200x1200/?bedsheet-set",
+    "description": "Presente popular para ajudar o casal: jogo de lençol extra."
+  },
+  {
+    "id": "conjunto-de-cabides",
+    "title": "Conjunto de cabides",
+    "price": 79,
+    "image": "https://source.unsplash.com/1200x1200/?hangers",
+    "description": "Presente popular para ajudar o casal: conjunto de cabides."
+  },
+  {
+    "id": "organizadores-de-guarda-roupa",
+    "title": "Organizadores de guarda-roupa",
+    "price": 129,
+    "image": "https://source.unsplash.com/1200x1200/?closet-organizers",
+    "description": "Presente popular para ajudar o casal: organizadores de guarda-roupa."
+  },
+  {
+    "id": "caixa-organizadora",
+    "title": "Caixa organizadora",
+    "price": 69,
+    "image": "https://source.unsplash.com/1200x1200/?storage-box",
+    "description": "Presente popular para ajudar o casal: caixa organizadora."
+  },
+  {
+    "id": "kit-ferramentas-básico",
+    "title": "Kit ferramentas básico",
+    "price": 149,
+    "image": "https://source.unsplash.com/1200x1200/?tool-kit",
+    "description": "Presente popular para ajudar o casal: kit ferramentas básico."
+  },
+  {
+    "id": "extensãofiltro-de-linha",
+    "title": "Extensão/filtro de linha",
+    "price": 79,
+    "image": "https://source.unsplash.com/1200x1200/?power-strip",
+    "description": "Presente popular para ajudar o casal: extensão/filtro de linha."
+  },
+  {
+    "id": "kit-de-primeiros-socorros",
+    "title": "Kit de primeiros socorros",
+    "price": 89,
+    "image": "https://source.unsplash.com/1200x1200/?first-aid-kit",
+    "description": "Presente popular para ajudar o casal: kit de primeiros socorros."
+  },
+  {
+    "id": "cota-para-reformadecoração",
+    "title": "Cota para reforma/decoração",
+    "price": 200,
+    "image": "https://source.unsplash.com/1200x1200/?home-renovation",
+    "description": "Presente popular para ajudar o casal: cota para reforma/decoração."
+  },
+  {
+    "id": "cota-para-lua-de-mel",
+    "title": "Cota para lua de mel",
+    "price": 300,
+    "image": "https://source.unsplash.com/1200x1200/?honeymoon%2Ctravel",
+    "description": "Presente popular para ajudar o casal: cota para lua de mel."
   }
 ]

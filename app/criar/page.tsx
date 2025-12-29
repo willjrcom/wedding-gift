@@ -102,6 +102,7 @@ export default function CriarPage() {
               placeholder="Ex: Venha celebrar com a gente!"
               value={form.description}
               onChange={v => set('description', v)}
+              required
             />
 
             <InputField
@@ -178,13 +179,6 @@ export default function CriarPage() {
               value={form.pixKey}
               onChange={v => set('pixKey', v)}
               required
-            />
-
-            <InputField
-              label="Imagem do casal (URL)"
-              placeholder="Qualquer link de imagem (https://...)"
-              value={form.imageUrl}
-              onChange={v => set('imageUrl', v)}
             />
 
 			<div className="-mt-1">
