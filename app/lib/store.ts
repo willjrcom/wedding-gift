@@ -1,4 +1,4 @@
-import { promises as fs } from 'fs'
+import { promises as fs, existsSync } from 'fs'
 import path from 'path'
 import crypto from 'crypto'
 
@@ -19,10 +19,52 @@ export type StoredList = {
   data: ListData
 }
 
-const DATA_DIR = process.env.DATA_DIR || path.join(process.cwd(), '.data')
+// Storage must be a mounted volume (e.g. Dokploy/Docker named volume).
+// By default, we expect it at /data, but you can override with DATA_DIR.
+const DATA_DIR = process.env.DATA_DIR || '/data'
 const FILE = path.join(DATA_DIR, 'lists.json')
 
+function normalize(p: string) {
+  return path.resolve(p)
+}
+
+async function assertMountedVolume(dirPath: string) {
+  const dir = normalize(dirPath)
+
+  // Must exist
+  if (!existsSync(dir)) {
+    throw new Error(`DATA_DIR '${dirPath}' não existe. Monte um volume nesse caminho.`)
+  }
+
+  // Must be an actual mount point (volume/bind mount). Otherwise data will be lost on container restart.
+  // We detect this by checking /proc/self/mountinfo (Linux containers).
+  let mountinfo = ''
+  try {
+    mountinfo = await fs.readFile('/proc/self/mountinfo', 'utf8')
+  } catch {
+    throw new Error(
+      `Não foi possível verificar o mount do volume. Garanta que DATA_DIR ('${dirPath}') seja um volume montado.`
+    )
+  }
+
+  const mounted = mountinfo
+    .split('\n')
+    .some(line => {
+      if (!line) return false
+      const parts = line.split(' ')
+      // mount point is the 5th field
+      return parts[4] === dir
+    })
+
+  if (!mounted) {
+    throw new Error(
+      `DATA_DIR '${dirPath}' não é um volume montado. Configure um Volume Mount/Bind Mount para '${dirPath}'.`
+    )
+  }
+}
+
 async function ensure() {
+  await assertMountedVolume(DATA_DIR)
   await fs.mkdir(DATA_DIR, { recursive: true })
   try {
     await fs.access(FILE)

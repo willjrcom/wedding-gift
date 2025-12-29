@@ -3,7 +3,7 @@
 Agora o projeto roda com **Next.js como backend** (SSR + API Routes), permitindo:
 
 - Link criptografado: `?t=...` (AES-256-GCM) — não expõe dados na URL
-- Persistência simples em arquivo (`.data/lists.json`)
+- Persistência simples em arquivo (`lists.json`) em um volume (`DATA_DIR`)
 - Checkout com **Mercado Pago** para liberar Pix (pagamento único)
 - Envio de e-mails quando a lista é criada (free) e quando o Pix é ativado (pagamento aprovado)
 - Página de **Dúvidas** em `/duvidas`
@@ -22,13 +22,12 @@ Veja `.env.example`.
 
 ## Persistência
 
-Por padrão, salva em:
+Este projeto **exige** um volume montado para persistir as listas.
 
-- `.data/lists.json`
+- Monte um volume no container em `/data`
+- Defina `DATA_DIR=/data`
 
-Em produção, recomendo montar um volume no container e apontar:
-
-- `DATA_DIR=/data`
+Se o volume não estiver montado, a API retorna erro (para evitar “perder” dados ao reiniciar).
 
 ## Deploy (Docker)
 

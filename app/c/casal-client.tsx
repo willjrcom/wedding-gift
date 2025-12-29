@@ -268,7 +268,7 @@ export default function CasalClient() {
         </div>
       </div>
 
-      <Toast show={!!toast} text={toast ?? ''} />
+      <Toast show={!!toast} text={toast || ''} />
     </main>
   )
 }

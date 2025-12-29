@@ -11,6 +11,10 @@ FROM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=3000
+ENV DATA_DIR=/data
+
+# Persisted data (mount a volume at /data in production)
+RUN mkdir -p /data
 
 # standalone output
 COPY --from=builder /app/.next/standalone ./

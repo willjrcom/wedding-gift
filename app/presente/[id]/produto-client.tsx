@@ -161,7 +161,7 @@ export default function ProdutoClient({ gift, t }: { gift: Gift; t: string }) {
         </div>
       </div>
 
-      <Toast show={!!toast} text={toast ?? ''} />
+      <Toast show={!!toast} text={toast || ''} />
     </main>
   )
 }
