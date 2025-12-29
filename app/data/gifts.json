@@ -70,8 +70,8 @@
     "description": "Sanduicheira e grill 2 em 1, placas antiaderentes, prepara sanduíches, carnes e vegetais. Fácil de limpar, compacta para qualquer espaço."
   },
   {
-    "id": "micro-ondas-ajuda-na-compra",
-    "title": "Micro-ondas (ajuda na compra) (LG)",
+    "id": "micro-ondas",
+    "title": "Micro-ondas (LG)",
     "price": 450,
     "image": "/public/images/micro-ondas-lg.webp",
     "description": "Micro-ondas digital, 20L, função descongelar, timer e painel fácil de usar. Ideal para aquecer e preparar refeições rápidas."
@@ -92,9 +92,9 @@
   },
   {
     "id": "panela-elétrica-multifunções",
-    "title": "Panela elétrica multifunções (Philips)",
+    "title": "Panela elétrica multifunções (Philco)",
     "price": 399,
-    "image": "/public/images/panela-multifuncoes-philips.webp",
+    "image": "/public/images/panela-multifuncoes-philco.webp",
     "description": "Panela elétrica multifunções, 6L, 12 programas automáticos. Cozinha a vapor, refoga, assa e faz sobremesas. Acompanha livro de receitas."
   },
   {
@@ -280,8 +280,8 @@
     "description": "Jarra com filtro de água, remove impurezas e cloro. Garante água pura e saudável para você e sua família."
   },
   {
-    "id": "filtro-de-água-ajuda-na-compra",
-    "title": "Filtro de água (ajuda na compra) (Soft Drink)",
+    "id": "filtro-de-água",
+    "title": "Filtro de água (Soft Drink)",
     "price": 350,
     "image": "",
     "description": "Filtro de água com tecnologia de purificação avançada. Garante água limpa e saudável, removendo impurezas e cloro."
