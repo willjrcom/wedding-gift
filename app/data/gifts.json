@@ -423,98 +423,98 @@
     "id": "almofadas-decorativas",
     "title": "Almofadas decorativas (Decorlar)",
     "price": 129,
-    "image": "",
+    "image": "/images/almofadas-decorativas-decorelar.webp",
     "description": "Almofadas decorativas em tecido poliéster, com enchimento em fibra siliconada. Macias e com estampas modernas."
   },
   {
     "id": "jogo-americano-kit",
     "title": "Jogo americano (kit) (Porto Brasil)",
     "price": 99,
-    "image": "",
+    "image": "/images/jogo-americano-kit-portobrasil.webp",
     "description": "Jogo americano em tecido impermeável, fácil de limpar. Protege a mesa e dá um toque especial à sua decoração."
   },
   {
     "id": "toalha-de-mesa",
     "title": "Toalha de mesa (Porto Brasil)",
     "price": 119,
-    "image": "",
+    "image": "/images/toalha-mesa-portobrasil.webp",
     "description": "Toalha de mesa em tecido 100% poliéster, fácil de lavar. Diversas opções de cores e estampas."
   },
   {
     "id": "guardanapos-kit",
     "title": "Guardanapos (kit) (Porto Brasil)",
     "price": 79,
-    "image": "",
+    "image": "/images/guardanapos-kit-portobrasil.webp",
     "description": "Kit com 12 guardanapos em tecido 100% poliéster, fáceis de lavar e secar. Diversas opções de cores."
   },
   {
     "id": "panos-de-prato-kit",
     "title": "Panos de prato (kit) (Porto Brasil)",
     "price": 59,
-    "image": "",
+    "image": "/images/panos-prato-kit-portobrasil.webp",
     "description": "Kit com 10 panos de prato em algodão 100%, super absorventes. Ideais para secar louças e mãos."
   },
   {
     "id": "potes-organizadores-geladeira",
     "title": "Potes organizadores geladeira (Inova)",
     "price": 89,
-    "image": "",
+    "image": "/images/potes-organizadores-geladeira-inova.webp",
     "description": "Potes organizadores para geladeira, em plástico BPA free. Mantém alimentos frescos e organizados."
   },
   {
     "id": "organizador-de-temperos",
     "title": "Organizador de temperos (Inova)",
     "price": 99,
-    "image": "",
+    "image": "/images/organizador-temperos-inova.webp",
     "description": "Organizador de temperos em acrílico, com 16 frascos. Mantenha seus temperos organizados e sempre à mão."
   },
   {
     "id": "moedor-de-pimenta-sal",
     "title": "Moedor de pimenta/sal (Inova)",
     "price": 89,
-    "image": "",
+    "image": "/images/moedor-pimenta-sal-inova.webp",
     "description": "Moedor de pimenta e sal em inox, ajuste de moagem. Acompanha suporte para mesa. Praticidade e elegância na sua cozinha."
   },
   {
     "id": "balanca-de-cozinha",
     "title": "Balança de cozinha (Filizola)",
     "price": 99,
-    "image": "",
+    "image": "/images/balanca-cozinha-filizola.webp",
     "description": "Balança digital de cozinha, capacidade 5kg, precisão de 1g. Tela LCD, fácil de usar e limpar."
   },
   {
     "id": "termometro-culinario",
     "title": "Termômetro culinário (Mede Fácil)",
     "price": 79,
-    "image": "",
+    "image": "/images/termometro-culinario-medefacil.webp",
     "description": "Termômetro culinário digital, faixa de medição -50°C a 300°C. Ideal para carnes, pães e doces."
   },
   {
     "id": "forma-de-pao-bolo-ingles",
     "title": "Forma de pão/bolo inglês (Mestre das Facas)",
     "price": 69,
-    "image": "",
+    "image": "/images/forma-pao-bolo-ingles-mestredasfacas.webp",
     "description": "Forma de pão em alumínio, 25cm, antiaderente. Ideal para preparar pães caseiros e bolos."
   },
   {
     "id": "frigideira-para-panqueca",
     "title": "Frigideira para panqueca (Mestre das Facas)",
     "price": 99,
-    "image": "",
+    "image": "/images/frigideira-panqueca-mestredasfacas.webp",
     "description": "Frigideira para panqueca em alumínio, 20cm, antiaderente. Ideal para preparar panquecas, omeletes e crepes."
   },
   {
     "id": "waffle-maker",
     "title": "Waffle maker (Philips)",
     "price": 199,
-    "image": "",
+    "image": "/images/waffle-maker-philips.webp",
     "description": "Waffle maker antiaderente, 4 waffles por vez, ajuste de temperatura. Prepare waffles crocantes e deliciosos."
   },
   {
     "id": "panela-de-pipoca",
     "title": "Panela de pipoca (Popcorn Time)",
     "price": 119,
-    "image": "",
+    "image": "/images/panela-pipoca-popcorntime.webp",
     "description": "Panela de pipoca em alumínio, 24cm, com tampa de vidro. Prepare pipocas crocantes e saudáveis no micro-ondas."
   },
   {
