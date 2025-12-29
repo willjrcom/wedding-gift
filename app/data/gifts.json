@@ -3,98 +3,98 @@
     "id": "air-fryer",
     "title": "Air fryer (Philco)",
     "price": 399,
-    "image": "/public/images/air-fryer.webp",
+    "image": "/images/air-fryer.webp",
     "description": "Air Fryer digital, capacidade 4L, prepara alimentos crocantes e saudáveis sem óleo. Ideal para batatas, carnes e legumes. Design moderno, fácil de limpar."
   },
   {
     "id": "liquidificador",
     "title": "Liquidificador (Mondial)",
     "price": 259,
-    "image": "/public/images/liquidificador-mondial.webp",
+    "image": "/images/liquidificador-mondial.webp",
     "description": "Liquidificador potente, 900W, copo de 2L em acrílico resistente. Função pulsar, ideal para sucos, vitaminas e massas. Lâminas inox de alta durabilidade."
   },
   {
     "id": "batedeira",
     "title": "Batedeira (Arno)",
     "price": 349,
-    "image": "/public/images/batedeira-arno.webp",
+    "image": "/images/batedeira-arno.webp",
     "description": "Batedeira planetária, 8 velocidades, tigela 4L em inox. Perfeita para massas leves e pesadas, acompanha batedores para diferentes receitas."
   },
   {
     "id": "mixer",
     "title": "Mixer (Oster)",
     "price": 199,
-    "image": "/public/images/mixer-oster.webp",
+    "image": "/images/mixer-oster.webp",
     "description": "Mixer 3 em 1, acompanha copo medidor, triturador e batedor. Compacto, ideal para sopas, molhos e smoothies. Fácil de desmontar e lavar."
   },
   {
     "id": "processador-de-alimentos",
     "title": "Processador de alimentos (Philips)",
     "price": 379,
-    "image": "/public/images/processador-philips.webp",
+    "image": "/images/processador-philips.webp",
     "description": "Processador multifunção, corta, rala, fatia e tritura. Capacidade 2L, lâminas em aço inox, ideal para saladas, massas e sobremesas."
   },
   {
     "id": "cafeteira-elétrica",
     "title": "Cafeteira elétrica (Cadence)",
     "price": 299,
-    "image": "/public/images/cafeteira-cadence.webp",
+    "image": "/images/cafeteira-cadence.webp",
     "description": "Cafeteira elétrica, prepara até 30 xícaras, jarra de vidro, filtro permanente. Função manter aquecido, design compacto para qualquer cozinha."
   },
   {
     "id": "cafeteira-italiana-moka",
     "title": "Cafeteira italiana (moka) (Bialetti)",
     "price": 129,
-    "image": "/public/images/cafeteira-bialetti.webp",
+    "image": "/images/cafeteira-bialetti.webp",
     "description": "Cafeteira italiana Moka, alumínio resistente, prepara café encorpado e aromático. Fácil de usar, ideal para quem aprecia café tradicional."
   },
   {
     "id": "chaleira-elétrica",
     "title": "Chaleira elétrica (Electrolux)",
     "price": 179,
-    "image": "/public/images/chaleira-electrolux.webp",
+    "image": "/images/chaleira-electrolux.webp",
     "description": "Chaleira elétrica, capacidade 1,7L, fervedor rápido, desligamento automático. Perfeita para chás, cafés e preparo de alimentos instantâneos."
   },
   {
     "id": "torradeira",
     "title": "Torradeira (Black+Decker)",
     "price": 169,
-    "image": "/public/images/torradeira-blackdecker.webp",
+    "image": "/images/torradeira-blackdecker.webp",
     "description": "Torradeira elétrica, 6 níveis de tostagem, bandeja coletora de migalhas. Prepara pães crocantes rapidamente, design elegante."
   },
   {
     "id": "sanduicheiragrill",
     "title": "Sanduicheira/grill (Britânia)",
     "price": 189,
-    "image": "/public/images/sanduicheiragrill-britania.webp",
+    "image": "/images/sanduicheiragrill-britania.webp",
     "description": "Sanduicheira e grill 2 em 1, placas antiaderentes, prepara sanduíches, carnes e vegetais. Fácil de limpar, compacta para qualquer espaço."
   },
   {
     "id": "micro-ondas",
     "title": "Micro-ondas (LG)",
     "price": 450,
-    "image": "/public/images/micro-ondas-lg.webp",
+    "image": "/images/micro-ondas-lg.webp",
     "description": "Micro-ondas digital, 20L, função descongelar, timer e painel fácil de usar. Ideal para aquecer e preparar refeições rápidas."
   },
   {
     "id": "panela-de-pressão",
     "title": "Panela de pressão (Tramontina)",
     "price": 219,
-    "image": "/public/images/panela-pressao-tramontina.webp",
+    "image": "/images/panela-pressao-tramontina.webp",
     "description": "Panela de pressão 4,5L, aço inox, sistema de segurança triplo. Cozinha feijão, carnes e legumes de forma rápida e prática."
   },
   {
     "id": "panela-elétrica-de-arroz",
     "title": "Panela elétrica de arroz (Arno)",
     "price": 199,
-    "image": "/public/images/panela-arroz-arno.webp",
+    "image": "/images/panela-arroz-arno.webp",
     "description": "Panela elétrica de arroz, capacidade 1,8L, cozimento uniforme, mantém aquecido. Ideal para preparar arroz perfeito todos os dias."
   },
   {
     "id": "panela-elétrica-multifunções",
     "title": "Panela elétrica multifunções (Philco)",
     "price": 399,
-    "image": "/public/images/panela-multifuncoes-philco.webp",
+    "image": "/images/panela-multifuncoes-philco.webp",
     "description": "Panela elétrica multifunções, 6L, 12 programas automáticos. Cozinha a vapor, refoga, assa e faz sobremesas. Acompanha livro de receitas."
   },
   {
