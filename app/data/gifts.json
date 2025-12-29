@@ -101,70 +101,70 @@
     "id": "conjunto-de-panelas-antiaderentes",
     "title": "Conjunto de panelas antiaderentes (Ceraflame)",
     "price": 499,
-    "image": "",
+    "image": "/images/conjunto-panelas-ceraflame.webp",
     "description": "Conjunto de panelas antiaderentes, 5 peças, revestimento em cerâmica. Cozinha saudável sem grudar, fácil limpeza, compatível com todos os fogões."
   },
   {
     "id": "conjunto-de-panelas-inox",
     "title": "Conjunto de panelas inox (Tramontina)",
     "price": 699,
-    "image": "",
+    "image": "/images/conjunto-panelas-tramontina.webp",
     "description": "Conjunto de panelas inox, 7 peças, alta durabilidade e resistência. Distribuição uniforme de calor, cabos antitérmicos, design elegante."
   },
   {
-    "id": "frigideira-boa",
-    "title": "Frigideira (boa) (Brinox)",
+    "id": "frigideira",
+    "title": "Frigideira (Brinox)",
     "price": 189,
-    "image": "",
+    "image": "/images/frigideira-brinox.webp",
     "description": "Frigideira antiaderente, 28cm, revestimento em pedra. Cozinha sem óleo, fácil de limpar, cabo ergonômico e resistente ao calor."
   },
   {
     "id": "panela-wok",
     "title": "Panela wok (Rochedo)",
     "price": 179,
-    "image": "",
+    "image": "/images/panela-wok-rochedo.webp",
     "description": "Panela wok em aço carbono, 30cm, ideal para refogar e fritar. Distribuição uniforme de calor, cabo de madeira antitérmico."
   },
   {
     "id": "panela-de-ferro-dutch-oven",
     "title": "Panela de ferro (dutch oven) (Le Creuset)",
     "price": 499,
-    "image": "",
+    "image": "/images/panela-ferro-dutchoven-lecreuset.webp",
     "description": "Panela de ferro fundido, 6,5L, tampa com encaixe perfeito. Ideal para cozidos, assados e pães, mantém o calor por mais tempo."
   },
   {
     "id": "assadeiras-kit",
-    "title": "Assadeiras (kit) (Mestre das Facas)",
+    "title": "Assadeiras (Tramontina)",
     "price": 159,
-    "image": "",
+    "image": "/images/aassadeiras-tramontina.webp",
     "description": "Kit com 3 assadeiras antiaderentes, diferentes tamanhos. Perfeitas para bolos, tortas e assados em geral. Fácil limpeza e armazenamento."
   },
   {
     "id": "formas-de-bolo-kit",
-    "title": "Formas de bolo (kit) (Mestre das Facas)",
+    "title": "Formas de bolo (Tramontina)",
     "price": 129,
-    "image": "",
+    "image": "/images/formas-bolo-tramontina.webp",
     "description": "Kit com 3 formas de bolo em alumínio, 20cm, 24cm e 28cm. Distribuição uniforme de calor, ideal para bolos perfeitos."
   },
   {
     "id": "conjunto-de-facas",
     "title": "Conjunto de facas (Tramontina)",
     "price": 299,
-    "image": "",
+    "image": "/images/conjunto-facas-tramontina.webp",
     "description": "Conjunto de facas profissionais, 6 peças em inox. Acompanha bloco para armazenamento seguro. Corte preciso e durabilidade."
   },
   {
     "id": "afiador-de-facas",
     "title": "Afiador de facas (Cuisinart)",
     "price": 89,
-    "image": "",
+    "image": "/images/afiador-facas-cuisinart.webp",
     "description": "Afiador de facas manual, compacto e eficiente. Mantenha suas facas sempre afiadas com segurança e facilidade."
   },
   {
     "id": "tábua-de-corte-bambu",
     "title": "Tábua de corte (bambu) (Cuisinart)",
     "price": 99,
-    "image": "",
+    "image": "/images/tabua-corte-bambu-cuisinart.webp",
     "description": "Tábua de corte em bambu, resistente e durável. Superfície antibacteriana, ideal para cortar carnes, frutas e vegetais."
   },
   {
