@@ -1,702 +1,702 @@
 [
   {
     "id": "air-fryer",
-    "title": "Air fryer",
+    "title": "Air fryer (Philco)",
     "price": 399,
     "image": "https://source.unsplash.com/1200x1200/?air-fryer%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: air fryer."
+    "description": "Air Fryer digital, capacidade 4L, prepara alimentos crocantes e saudáveis sem óleo. Ideal para batatas, carnes e legumes. Design moderno, fácil de limpar."
   },
   {
     "id": "liquidificador",
-    "title": "Liquidificador",
+    "title": "Liquidificador (Mondial)",
     "price": 259,
     "image": "https://source.unsplash.com/1200x1200/?blender%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: liquidificador."
+    "description": "Liquidificador potente, 900W, copo de 2L em acrílico resistente. Função pulsar, ideal para sucos, vitaminas e massas. Lâminas inox de alta durabilidade."
   },
   {
     "id": "batedeira",
-    "title": "Batedeira",
+    "title": "Batedeira (Arno)",
     "price": 349,
     "image": "https://source.unsplash.com/1200x1200/?stand-mixer%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: batedeira."
+    "description": "Batedeira planetária, 8 velocidades, tigela 4L em inox. Perfeita para massas leves e pesadas, acompanha batedores para diferentes receitas."
   },
   {
     "id": "mixer",
-    "title": "Mixer",
+    "title": "Mixer (Oster)",
     "price": 199,
     "image": "https://source.unsplash.com/1200x1200/?hand-blender%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: mixer."
+    "description": "Mixer 3 em 1, acompanha copo medidor, triturador e batedor. Compacto, ideal para sopas, molhos e smoothies. Fácil de desmontar e lavar."
   },
   {
     "id": "processador-de-alimentos",
-    "title": "Processador de alimentos",
+    "title": "Processador de alimentos (Philips)",
     "price": 379,
     "image": "https://source.unsplash.com/1200x1200/?food-processor%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: processador de alimentos."
+    "description": "Processador multifunção, corta, rala, fatia e tritura. Capacidade 2L, lâminas em aço inox, ideal para saladas, massas e sobremesas."
   },
   {
     "id": "cafeteira-elétrica",
-    "title": "Cafeteira elétrica",
+    "title": "Cafeteira elétrica (Cadence)",
     "price": 299,
     "image": "https://source.unsplash.com/1200x1200/?coffee-maker%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: cafeteira elétrica."
+    "description": "Cafeteira elétrica, prepara até 30 xícaras, jarra de vidro, filtro permanente. Função manter aquecido, design compacto para qualquer cozinha."
   },
   {
     "id": "cafeteira-italiana-moka",
-    "title": "Cafeteira italiana (moka)",
+    "title": "Cafeteira italiana (moka) (Bialetti)",
     "price": 129,
     "image": "https://source.unsplash.com/1200x1200/?moka%2Ccoffee",
-    "description": "Presente popular para ajudar o casal: cafeteira italiana (moka)."
+    "description": "Cafeteira italiana Moka, alumínio resistente, prepara café encorpado e aromático. Fácil de usar, ideal para quem aprecia café tradicional."
   },
   {
     "id": "chaleira-elétrica",
-    "title": "Chaleira elétrica",
+    "title": "Chaleira elétrica (Electrolux)",
     "price": 179,
     "image": "https://source.unsplash.com/1200x1200/?electric-kettle%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: chaleira elétrica."
+    "description": "Chaleira elétrica, capacidade 1,7L, fervedor rápido, desligamento automático. Perfeita para chás, cafés e preparo de alimentos instantâneos."
   },
   {
     "id": "torradeira",
-    "title": "Torradeira",
+    "title": "Torradeira (Black+Decker)",
     "price": 169,
     "image": "https://source.unsplash.com/1200x1200/?toaster%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: torradeira."
+    "description": "Torradeira elétrica, 6 níveis de tostagem, bandeja coletora de migalhas. Prepara pães crocantes rapidamente, design elegante."
   },
   {
     "id": "sanduicheiragrill",
-    "title": "Sanduicheira/grill",
+    "title": "Sanduicheira/grill (Britânia)",
     "price": 189,
     "image": "https://source.unsplash.com/1200x1200/?panini-press%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: sanduicheira/grill."
+    "description": "Sanduicheira e grill 2 em 1, placas antiaderentes, prepara sanduíches, carnes e vegetais. Fácil de limpar, compacta para qualquer espaço."
   },
   {
     "id": "micro-ondas-ajuda-na-compra",
-    "title": "Micro-ondas (ajuda na compra)",
+    "title": "Micro-ondas (ajuda na compra) (LG)",
     "price": 450,
     "image": "https://source.unsplash.com/1200x1200/?microwave%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: micro-ondas (ajuda na compra)."
+    "description": "Micro-ondas digital, 20L, função descongelar, timer e painel fácil de usar. Ideal para aquecer e preparar refeições rápidas."
   },
   {
     "id": "panela-de-pressão",
-    "title": "Panela de pressão",
+    "title": "Panela de pressão (Tramontina)",
     "price": 219,
     "image": "https://source.unsplash.com/1200x1200/?pressure-cooker%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: panela de pressão."
+    "description": "Panela de pressão 4,5L, aço inox, sistema de segurança triplo. Cozinha feijão, carnes e legumes de forma rápida e prática."
   },
   {
     "id": "panela-elétrica-de-arroz",
-    "title": "Panela elétrica de arroz",
+    "title": "Panela elétrica de arroz (Arno)",
     "price": 199,
     "image": "https://source.unsplash.com/1200x1200/?rice-cooker%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: panela elétrica de arroz."
+    "description": "Panela elétrica de arroz, capacidade 1,8L, cozimento uniforme, mantém aquecido. Ideal para preparar arroz perfeito todos os dias."
   },
   {
     "id": "panela-elétrica-multifunções",
-    "title": "Panela elétrica multifunções",
+    "title": "Panela elétrica multifunções (Philips)",
     "price": 399,
     "image": "https://source.unsplash.com/1200x1200/?multi-cooker%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: panela elétrica multifunções."
+    "description": "Panela elétrica multifunções, 6L, 12 programas automáticos. Cozinha a vapor, refoga, assa e faz sobremesas. Acompanha livro de receitas."
   },
   {
     "id": "conjunto-de-panelas-antiaderentes",
-    "title": "Conjunto de panelas antiaderentes",
+    "title": "Conjunto de panelas antiaderentes (Ceraflame)",
     "price": 499,
     "image": "https://source.unsplash.com/1200x1200/?cookware%2Cpots",
-    "description": "Presente popular para ajudar o casal: conjunto de panelas antiaderentes."
+    "description": "Conjunto de panelas antiaderentes, 5 peças, revestimento em cerâmica. Cozinha saudável sem grudar, fácil limpeza, compatível com todos os fogões."
   },
   {
     "id": "conjunto-de-panelas-inox",
-    "title": "Conjunto de panelas inox",
+    "title": "Conjunto de panelas inox (Tramontina)",
     "price": 699,
     "image": "https://source.unsplash.com/1200x1200/?stainless%2Ccookware",
-    "description": "Presente popular para ajudar o casal: conjunto de panelas inox."
+    "description": "Conjunto de panelas inox, 7 peças, alta durabilidade e resistência. Distribuição uniforme de calor, cabos antitérmicos, design elegante."
   },
   {
     "id": "frigideira-boa",
-    "title": "Frigideira (boa)",
+    "title": "Frigideira (boa) (Brinox)",
     "price": 189,
     "image": "https://source.unsplash.com/1200x1200/?frying-pan%2Ccookware",
-    "description": "Presente popular para ajudar o casal: frigideira (boa)."
+    "description": "Frigideira antiaderente, 28cm, revestimento em pedra. Cozinha sem óleo, fácil de limpar, cabo ergonômico e resistente ao calor."
   },
   {
     "id": "panela-wok",
-    "title": "Panela wok",
+    "title": "Panela wok (Rochedo)",
     "price": 179,
     "image": "https://source.unsplash.com/1200x1200/?wok%2Ccookware",
-    "description": "Presente popular para ajudar o casal: panela wok."
+    "description": "Panela wok em aço carbono, 30cm, ideal para refogar e fritar. Distribuição uniforme de calor, cabo de madeira antitérmico."
   },
   {
     "id": "panela-de-ferro-dutch-oven",
-    "title": "Panela de ferro (dutch oven)",
+    "title": "Panela de ferro (dutch oven) (Le Creuset)",
     "price": 499,
     "image": "https://source.unsplash.com/1200x1200/?dutch-oven%2Ccookware",
-    "description": "Presente popular para ajudar o casal: panela de ferro (dutch oven)."
+    "description": "Panela de ferro fundido, 6,5L, tampa com encaixe perfeito. Ideal para cozidos, assados e pães, mantém o calor por mais tempo."
   },
   {
     "id": "assadeiras-kit",
-    "title": "Assadeiras (kit)",
+    "title": "Assadeiras (kit) (Mestre das Facas)",
     "price": 159,
     "image": "https://source.unsplash.com/1200x1200/?baking-tray%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: assadeiras (kit)."
+    "description": "Kit com 3 assadeiras antiaderentes, diferentes tamanhos. Perfeitas para bolos, tortas e assados em geral. Fácil limpeza e armazenamento."
   },
   {
     "id": "formas-de-bolo-kit",
-    "title": "Formas de bolo (kit)",
+    "title": "Formas de bolo (kit) (Mestre das Facas)",
     "price": 129,
     "image": "https://source.unsplash.com/1200x1200/?cake-pan%2Cbaking",
-    "description": "Presente popular para ajudar o casal: formas de bolo (kit)."
+    "description": "Kit com 3 formas de bolo em alumínio, 20cm, 24cm e 28cm. Distribuição uniforme de calor, ideal para bolos perfeitos."
   },
   {
     "id": "conjunto-de-facas",
-    "title": "Conjunto de facas",
+    "title": "Conjunto de facas (Tramontina)",
     "price": 299,
     "image": "https://source.unsplash.com/1200x1200/?kitchen-knives",
-    "description": "Presente popular para ajudar o casal: conjunto de facas."
+    "description": "Conjunto de facas profissionais, 6 peças em inox. Acompanha bloco para armazenamento seguro. Corte preciso e durabilidade."
   },
   {
     "id": "afiador-de-facas",
-    "title": "Afiador de facas",
+    "title": "Afiador de facas (Cuisinart)",
     "price": 89,
     "image": "https://source.unsplash.com/1200x1200/?knife-sharpener",
-    "description": "Presente popular para ajudar o casal: afiador de facas."
+    "description": "Afiador de facas manual, compacto e eficiente. Mantenha suas facas sempre afiadas com segurança e facilidade."
   },
   {
     "id": "tábua-de-corte-bambu",
-    "title": "Tábua de corte (bambu)",
+    "title": "Tábua de corte (bambu) (Cuisinart)",
     "price": 99,
     "image": "https://source.unsplash.com/1200x1200/?cutting-board",
-    "description": "Presente popular para ajudar o casal: tábua de corte (bambu)."
+    "description": "Tábua de corte em bambu, resistente e durável. Superfície antibacteriana, ideal para cortar carnes, frutas e vegetais."
   },
   {
     "id": "kit-de-utensílios-de-silicone",
-    "title": "Kit de utensílios de silicone",
+    "title": "Kit de utensílios de silicone (Tramontina)",
     "price": 119,
     "image": "https://source.unsplash.com/1200x1200/?kitchen-utensils",
-    "description": "Presente popular para ajudar o casal: kit de utensílios de silicone."
+    "description": "Kit com 5 utensílios de silicone, resistentes a altas temperaturas. Ideal para cozinhar e assar, não risca as superfícies."
   },
   {
     "id": "conchas-e-espátulas-kit",
-    "title": "Conchas e espátulas (kit)",
+    "title": "Conchas e espátulas (kit) (Tramontina)",
     "price": 89,
     "image": "https://source.unsplash.com/1200x1200/?spatula%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: conchas e espátulas (kit)."
+    "description": "Kit com concha e espátula em silicone, resistentes a altas temperaturas. Ideais para cozinhar, assar e servir."
   },
   {
     "id": "ralador-multiuso",
-    "title": "Ralador multiuso",
+    "title": "Ralador multiuso (Cuisinart)",
     "price": 59,
     "image": "https://source.unsplash.com/1200x1200/?grater%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: ralador multiuso."
+    "description": "Ralador 4 em 1, com diferentes lâminas para ralar, fatiar e picar. Acompanha recipiente coletor. Prático e fácil de limpar."
   },
   {
     "id": "descascador-de-legumes",
-    "title": "Descascador de legumes",
+    "title": "Descascador de legumes (Cuisinart)",
     "price": 39,
     "image": "https://source.unsplash.com/1200x1200/?peeler%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: descascador de legumes."
+    "description": "Descascador de legumes ergonômico, lâmina em aço inox. Facilita o preparo de legumes e frutas, seguro e prático."
   },
   {
     "id": "abridor-de-vinho",
-    "title": "Abridor de vinho",
+    "title": "Abridor de vinho (Wine Lover)",
     "price": 99,
     "image": "https://source.unsplash.com/1200x1200/?wine-opener",
-    "description": "Presente popular para ajudar o casal: abridor de vinho."
+    "description": "Abridor de vinho elétrico, remove a rolha com facilidade. Acompanha cortador de lacre. Presente ideal para apreciadores de vinho."
   },
   {
     "id": "jogo-de-taças-de-vinho",
-    "title": "Jogo de taças de vinho",
+    "title": "Jogo de taças de vinho (Crystal Glass)",
     "price": 179,
     "image": "https://source.unsplash.com/1200x1200/?wine-glasses",
-    "description": "Presente popular para ajudar o casal: jogo de taças de vinho."
+    "description": "Jogo com 6 taças de vinho em cristal, design elegante. Realce o sabor do seu vinho com estas taças sofisticadas."
   },
   {
     "id": "jogo-de-copos-kit",
-    "title": "Jogo de copos (kit)",
+    "title": "Jogo de copos (kit) (Nadir Figueiredo)",
     "price": 129,
     "image": "https://source.unsplash.com/1200x1200/?drinking-glasses",
-    "description": "Presente popular para ajudar o casal: jogo de copos (kit)."
+    "description": "Kit com 6 copos de vidro, design moderno e elegante. Perfeitos para água, sucos e drinks."
   },
   {
     "id": "jogo-de-xícaras-de-café",
-    "title": "Jogo de xícaras de café",
+    "title": "Jogo de xícaras de café (Porto Brasil)",
     "price": 139,
     "image": "https://source.unsplash.com/1200x1200/?coffee-cups",
-    "description": "Presente popular para ajudar o casal: jogo de xícaras de café."
+    "description": "Jogo com 6 xícaras de café em porcelana, design clássico. Aprecie seu café com elegância."
   },
   {
     "id": "aparelho-de-jantar-kit",
-    "title": "Aparelho de jantar (kit)",
+    "title": "Aparelho de jantar (kit) (Porto Brasil)",
     "price": 399,
     "image": "https://source.unsplash.com/1200x1200/?dinnerware",
-    "description": "Presente popular para ajudar o casal: aparelho de jantar (kit)."
+    "description": "Aparelho de jantar para 6 pessoas, em porcelana branca. Inclui pratos rasos, fundos e de sobremesa. Elegante e versátil."
   },
   {
     "id": "jogo-de-talheres",
-    "title": "Jogo de talheres",
+    "title": "Jogo de talheres (Tramontina)",
     "price": 229,
     "image": "https://source.unsplash.com/1200x1200/?cutlery",
-    "description": "Presente popular para ajudar o casal: jogo de talheres."
+    "description": "Jogo de talheres em inox para 6 pessoas, inclui faca, garfo e colher. Design sofisticado, durabilidade e resistência à corrosão."
   },
   {
     "id": "travessas-para-servir",
-    "title": "Travessas para servir",
+    "title": "Travessas para servir (Oxford)",
     "price": 159,
     "image": "https://source.unsplash.com/1200x1200/?serveware",
-    "description": "Presente popular para ajudar o casal: travessas para servir."
+    "description": "Travessa retangular em cerâmica, 35cm, ideal para servir carnes, peixes e vegetais. Design rústico e elegante."
   },
   {
     "id": "tigelas-kit",
-    "title": "Tigelas (kit)",
+    "title": "Tigelas (kit) (Porto Brasil)",
     "price": 129,
     "image": "https://source.unsplash.com/1200x1200/?bowls%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: tigelas (kit)."
+    "description": "Kit com 3 tigelas em cerâmica, 500ml, 1L e 1,5L. Ideais para preparar e servir saladas, massas e sobremesas."
   },
   {
     "id": "potes-herméticos-kit",
-    "title": "Potes herméticos (kit)",
+    "title": "Potes herméticos (kit) (Hermético)",
     "price": 139,
     "image": "https://source.unsplash.com/1200x1200/?storage-containers",
-    "description": "Presente popular para ajudar o casal: potes herméticos (kit)."
+    "description": "Kit com 5 potes herméticos em vidro, diferentes tamanhos. Mantém alimentos frescos por mais tempo, ideal para organização da despensa."
   },
   {
     "id": "jogo-de-panelas-para-fondue",
-    "title": "Jogo de panelas para fondue",
+    "title": "Jogo de panelas para fondue (Fondue & Cia)",
     "price": 199,
     "image": "https://source.unsplash.com/1200x1200/?fondue",
-    "description": "Presente popular para ajudar o casal: jogo de panelas para fondue."
+    "description": "Jogo completo para fondue, panela em inox com revestimento antiaderente. Acompanha garfos e base para aquecer. Ideal para momentos especiais."
   },
   {
     "id": "conjunto-de-potes-de-vidro",
-    "title": "Conjunto de potes de vidro",
+    "title": "Conjunto de potes de vidro (Hermético)",
     "price": 129,
     "image": "https://source.unsplash.com/1200x1200/?glass-containers",
-    "description": "Presente popular para ajudar o casal: conjunto de potes de vidro."
+    "description": "Conjunto com 6 potes de vidro, tampas herméticas. Ideal para armazenar alimentos, conservando o sabor e a crocância."
   },
   {
     "id": "jarrafiltro-de-água",
-    "title": "Jarra/filtro de água",
+    "title": "Jarra/filtro de água (Purific)",
     "price": 149,
     "image": "https://source.unsplash.com/1200x1200/?water-filter%2Cpitcher",
-    "description": "Presente popular para ajudar o casal: jarra/filtro de água."
+    "description": "Jarra com filtro de água, remove impurezas e cloro. Garante água pura e saudável para você e sua família."
   },
   {
     "id": "filtro-de-água-ajuda-na-compra",
-    "title": "Filtro de água (ajuda na compra)",
+    "title": "Filtro de água (ajuda na compra) (Soft Drink)",
     "price": 350,
     "image": "https://source.unsplash.com/1200x1200/?water-filter%2Ckitchen",
-    "description": "Presente popular para ajudar o casal: filtro de água (ajuda na compra)."
+    "description": "Filtro de água com tecnologia de purificação avançada. Garante água limpa e saudável, removendo impurezas e cloro."
   },
   {
     "id": "aspirador-de-pó",
-    "title": "Aspirador de pó",
+    "title": "Aspirador de pó (Electrolux)",
     "price": 399,
     "image": "https://source.unsplash.com/1200x1200/?vacuum%2Chome",
-    "description": "Presente popular para ajudar o casal: aspirador de pó."
+    "description": "Aspirador de pó vertical sem fio, 2 em 1. Bateria de longa duração, ideal para limpar pisos, carpetes e estofados."
   },
   {
     "id": "robô-aspirador-cota",
-    "title": "Robô aspirador (cota)",
+    "title": "Robô aspirador (cota) (iRobot)",
     "price": 450,
     "image": "https://source.unsplash.com/1200x1200/?robot-vacuum",
-    "description": "Presente popular para ajudar o casal: robô aspirador (cota)."
+    "description": "Robô aspirador com controle remoto, programação semanal. Limpeza eficiente de pisos frios e carpetes. Retorno automático à base."
   },
   {
     "id": "ferro-de-passar",
-    "title": "Ferro de passar",
+    "title": "Ferro de passar (Black+Decker)",
     "price": 179,
     "image": "https://source.unsplash.com/1200x1200/?iron%2Claundry",
-    "description": "Presente popular para ajudar o casal: ferro de passar."
+    "description": "Ferro de passar a vapor, 2200W, base antiaderente. Desamassa e alisa todos os tipos de tecidos com facilidade."
   },
   {
     "id": "tábua-de-passar",
-    "title": "Tábua de passar",
+    "title": "Tábua de passar (Tramontina)",
     "price": 149,
     "image": "https://source.unsplash.com/1200x1200/?ironing-board",
-    "description": "Presente popular para ajudar o casal: tábua de passar."
+    "description": "Tábua de passar regulável em altura, com suporte para ferro. Superfície ampla e resistente, facilita o deslizamento do ferro."
   },
   {
     "id": "varal-de-chão",
-    "title": "Varal de chão",
+    "title": "Varal de chão (Brinox)",
     "price": 119,
     "image": "https://source.unsplash.com/1200x1200/?clothesline",
-    "description": "Presente popular para ajudar o casal: varal de chão."
+    "description": "Varal de chão dobrável, com 20 metros de corda. Estrutura em alumínio, leve e resistente à corrosão."
   },
   {
     "id": "kit-de-limpeza-vassourarodo",
-    "title": "Kit de limpeza (vassoura/rodo)",
+    "title": "Kit de limpeza (vassoura/rodo) (Flash Limp)",
     "price": 99,
     "image": "https://source.unsplash.com/1200x1200/?cleaning-supplies",
-    "description": "Presente popular para ajudar o casal: kit de limpeza (vassoura/rodo)."
+    "description": "Kit com vassoura e rodo, cabo extensível. Ideal para limpar pisos frios, madeira e carpetes. Prático e fácil de armazenar."
   },
   {
     "id": "balde-mop",
-    "title": "Balde mop",
+    "title": "Balde mop (Flash Limp)",
     "price": 159,
     "image": "https://source.unsplash.com/1200x1200/?mop%2Ccleaning",
-    "description": "Presente popular para ajudar o casal: balde mop."
+    "description": "Balde mop com sistema de torção, fácil de espremer. Acompanha refil de microfibra, ideal para limpeza de pisos."
   },
   {
     "id": "jogo-de-toalhas-de-banho",
-    "title": "Jogo de toalhas de banho",
+    "title": "Jogo de toalhas de banho (Karsten)",
     "price": 199,
     "image": "https://source.unsplash.com/1200x1200/?bath-towels",
-    "description": "Presente popular para ajudar o casal: jogo de toalhas de banho."
+    "description": "Jogo com 4 toalhas de banho em algodão 100%, super absorventes. Macias e duráveis, disponíveis em várias cores."
   },
   {
     "id": "toalhas-de-rosto-kit",
-    "title": "Toalhas de rosto (kit)",
+    "title": "Toalhas de rosto (kit) (Karsten)",
     "price": 89,
     "image": "https://source.unsplash.com/1200x1200/?face-towels",
-    "description": "Presente popular para ajudar o casal: toalhas de rosto (kit)."
+    "description": "Kit com 6 toalhas de rosto em algodão 100%, macias e absorventes. Ideais para uso diário, disponíveis em várias cores."
   },
   {
     "id": "roupões-par",
-    "title": "Roupões (par)",
+    "title": "Roupões (par) (Karsten)",
     "price": 219,
     "image": "https://source.unsplash.com/1200x1200/?bathrobe",
-    "description": "Presente popular para ajudar o casal: roupões (par)."
+    "description": "Roupões em microfibra, super absorventes e de secagem rápida. Confortáveis e leves, ideais para usar após o banho."
   },
   {
     "id": "tapete-de-banheiro",
-    "title": "Tapete de banheiro",
+    "title": "Tapete de banheiro (Karsten)",
     "price": 79,
     "image": "https://source.unsplash.com/1200x1200/?bath-mat",
-    "description": "Presente popular para ajudar o casal: tapete de banheiro."
+    "description": "Tapete de banheiro em microfibra, antiderrapante. Super absorvente, seca rapidamente, disponível em várias cores."
   },
   {
     "id": "kit-acessórios-banheiro",
-    "title": "Kit acessórios banheiro",
+    "title": "Kit acessórios banheiro (Inova)",
     "price": 89,
     "image": "https://source.unsplash.com/1200x1200/?bathroom-accessories",
-    "description": "Presente popular para ajudar o casal: kit acessórios banheiro."
+    "description": "Kit com 5 peças de acessórios para banheiro em inox. Inclui porta-toalhas, saboneteira, copo e escova sanitária."
   },
   {
     "id": "jogo-de-cama-casal",
-    "title": "Jogo de cama casal",
+    "title": "Jogo de cama casal (Sultan)",
     "price": 299,
     "image": "https://source.unsplash.com/1200x1200/?bedsheets",
-    "description": "Presente popular para ajudar o casal: jogo de cama casal."
+    "description": "Jogo de cama casal em algodão 300 fios, toque suave e confortável. Inclui lençol de cima, lençol de baixo e duas fronhas."
   },
   {
     "id": "jogo-de-cama-queen",
-    "title": "Jogo de cama queen",
+    "title": "Jogo de cama queen (Sultan)",
     "price": 349,
     "image": "https://source.unsplash.com/1200x1200/?bed-linen",
-    "description": "Presente popular para ajudar o casal: jogo de cama queen."
+    "description": "Jogo de cama queen em algodão 300 fios, toque suave e confortável. Inclui lençol de cima, lençol de baixo e duas fronhas."
   },
   {
     "id": "edredom",
-    "title": "Edredom",
+    "title": "Edredom (Sultan)",
     "price": 279,
     "image": "https://source.unsplash.com/1200x1200/?comforter%2Cbed",
-    "description": "Presente popular para ajudar o casal: edredom."
+    "description": "Edredom em microfibra, 250g/m², quente e aconchegante. Composição 100% poliéster, fácil de lavar e secar."
   },
   {
     "id": "cobertormanta",
-    "title": "Cobertor/manta",
+    "title": "Cobertor/manta (Sultan)",
     "price": 169,
     "image": "https://source.unsplash.com/1200x1200/?blanket",
-    "description": "Presente popular para ajudar o casal: cobertor/manta."
+    "description": "Cobertor em microfibra, 200g/m², leve e quente. Ideal para usar no sofá, cama ou em viagens."
   },
   {
     "id": "travesseiros-par",
-    "title": "Travesseiros (par)",
+    "title": "Travesseiros (par) (Sultan)",
     "price": 149,
     "image": "https://source.unsplash.com/1200x1200/?pillows",
-    "description": "Presente popular para ajudar o casal: travesseiros (par)."
+    "description": "Travesseiros em espuma memory foam, conforto e suporte para a cabeça e pescoço. Capa removível e lavável."
   },
   {
     "id": "protetor-de-colchão",
-    "title": "Protetor de colchão",
+    "title": "Protetor de colchão (Sultan)",
     "price": 129,
     "image": "https://source.unsplash.com/1200x1200/?mattress-protector",
-    "description": "Presente popular para ajudar o casal: protetor de colchão."
+    "description": "Protetor de colchão impermeável, proteção contra líquidos e ácaros. Aumenta a durabilidade do colchão."
   },
   {
     "id": "cortinas",
-    "title": "Cortinas",
+    "title": "Cortinas (Decorelar)",
     "price": 249,
     "image": "https://source.unsplash.com/1200x1200/?curtains",
-    "description": "Presente popular para ajudar o casal: cortinas."
+    "description": "Cortinas em poliéster, blackout, bloqueiam até 90% da luz. Ajudam a manter a temperatura do ambiente."
   },
   {
     "id": "almofadas-decorativas",
-    "title": "Almofadas decorativas",
+    "title": "Almofadas decorativas (Decorlar)",
     "price": 129,
     "image": "https://source.unsplash.com/1200x1200/?decor-pillows",
-    "description": "Presente popular para ajudar o casal: almofadas decorativas."
+    "description": "Almofadas decorativas em tecido poliéster, com enchimento em fibra siliconada. Macias e com estampas modernas."
   },
   {
     "id": "jogo-americano-kit",
-    "title": "Jogo americano (kit)",
+    "title": "Jogo americano (kit) (Porto Brasil)",
     "price": 99,
     "image": "https://source.unsplash.com/1200x1200/?placemats",
-    "description": "Presente popular para ajudar o casal: jogo americano (kit)."
+    "description": "Jogo americano em tecido impermeável, fácil de limpar. Protege a mesa e dá um toque especial à sua decoração."
   },
   {
     "id": "toalha-de-mesa",
-    "title": "Toalha de mesa",
+    "title": "Toalha de mesa (Porto Brasil)",
     "price": 119,
     "image": "https://source.unsplash.com/1200x1200/?tablecloth",
-    "description": "Presente popular para ajudar o casal: toalha de mesa."
+    "description": "Toalha de mesa em tecido 100% poliéster, fácil de lavar. Diversas opções de cores e estampas."
   },
   {
     "id": "guardanapos-kit",
-    "title": "Guardanapos (kit)",
+    "title": "Guardanapos (kit) (Porto Brasil)",
     "price": 79,
     "image": "https://source.unsplash.com/1200x1200/?napkins",
-    "description": "Presente popular para ajudar o casal: guardanapos (kit)."
+    "description": "Kit com 12 guardanapos em tecido 100% poliéster, fáceis de lavar e secar. Diversas opções de cores."
   },
   {
     "id": "panos-de-prato-kit",
-    "title": "Panos de prato (kit)",
+    "title": "Panos de prato (kit) (Porto Brasil)",
     "price": 59,
     "image": "https://source.unsplash.com/1200x1200/?kitchen-towels",
-    "description": "Presente popular para ajudar o casal: panos de prato (kit)."
+    "description": "Kit com 10 panos de prato em algodão 100%, super absorventes. Ideais para secar louças e mãos."
   },
   {
     "id": "potes-organizadores-geladeira",
-    "title": "Potes organizadores geladeira",
+    "title": "Potes organizadores geladeira (Inova)",
     "price": 89,
     "image": "https://source.unsplash.com/1200x1200/?fridge-organizer",
-    "description": "Presente popular para ajudar o casal: potes organizadores geladeira."
+    "description": "Potes organizadores para geladeira, em plástico BPA free. Mantém alimentos frescos e organizados."
   },
   {
     "id": "organizador-de-temperos",
-    "title": "Organizador de temperos",
+    "title": "Organizador de temperos (Inova)",
     "price": 99,
     "image": "https://source.unsplash.com/1200x1200/?spice-rack",
-    "description": "Presente popular para ajudar o casal: organizador de temperos."
+    "description": "Organizador de temperos em acrílico, com 16 frascos. Mantenha seus temperos organizados e sempre à mão."
   },
   {
     "id": "moedor-de-pimentasal",
-    "title": "Moedor de pimenta/sal",
+    "title": "Moedor de pimenta/sal (Inova)",
     "price": 89,
     "image": "https://source.unsplash.com/1200x1200/?pepper-mill",
-    "description": "Presente popular para ajudar o casal: moedor de pimenta/sal."
+    "description": "Moedor de pimenta e sal em inox, ajuste de moagem. Acompanha suporte para mesa. Praticidade e elegância na sua cozinha."
   },
   {
     "id": "balança-de-cozinha",
-    "title": "Balança de cozinha",
+    "title": "Balança de cozinha (Filizola)",
     "price": 99,
     "image": "https://source.unsplash.com/1200x1200/?kitchen-scale",
-    "description": "Presente popular para ajudar o casal: balança de cozinha."
+    "description": "Balança digital de cozinha, capacidade 5kg, precisão de 1g. Tela LCD, fácil de usar e limpar."
   },
   {
     "id": "termômetro-culinário",
-    "title": "Termômetro culinário",
+    "title": "Termômetro culinário (Mede Fácil)",
     "price": 79,
     "image": "https://source.unsplash.com/1200x1200/?cooking-thermometer",
-    "description": "Presente popular para ajudar o casal: termômetro culinário."
+    "description": "Termômetro culinário digital, faixa de medição -50°C a 300°C. Ideal para carnes, pães e doces."
   },
   {
     "id": "forma-de-pãobolo-inglês",
-    "title": "Forma de pão/bolo inglês",
+    "title": "Forma de pão/bolo inglês (Mestre das Facas)",
     "price": 69,
     "image": "https://source.unsplash.com/1200x1200/?loaf-pan",
-    "description": "Presente popular para ajudar o casal: forma de pão/bolo inglês."
+    "description": "Forma de pão em alumínio, 25cm, antiaderente. Ideal para preparar pães caseiros e bolos."
   },
   {
     "id": "frigideira-para-panqueca",
-    "title": "Frigideira para panqueca",
+    "title": "Frigideira para panqueca (Mestre das Facas)",
     "price": 99,
     "image": "https://source.unsplash.com/1200x1200/?pancake-pan",
-    "description": "Presente popular para ajudar o casal: frigideira para panqueca."
+    "description": "Frigideira para panqueca em alumínio, 20cm, antiaderente. Ideal para preparar panquecas, omeletes e crepes."
   },
   {
     "id": "waffle-maker",
-    "title": "Waffle maker",
+    "title": "Waffle maker (Philips)",
     "price": 199,
     "image": "https://source.unsplash.com/1200x1200/?waffle-maker",
-    "description": "Presente popular para ajudar o casal: waffle maker."
+    "description": "Waffle maker antiaderente, 4 waffles por vez, ajuste de temperatura. Prepare waffles crocantes e deliciosos."
   },
   {
     "id": "panela-de-pipoca",
-    "title": "Panela de pipoca",
+    "title": "Panela de pipoca (Popcorn Time)",
     "price": 119,
     "image": "https://source.unsplash.com/1200x1200/?popcorn",
-    "description": "Presente popular para ajudar o casal: panela de pipoca."
+    "description": "Panela de pipoca em alumínio, 24cm, com tampa de vidro. Prepare pipocas crocantes e saudáveis no micro-ondas."
   },
   {
     "id": "kit-churrasco",
-    "title": "Kit churrasco",
+    "title": "Kit churrasco (MasterChef)",
     "price": 199,
     "image": "https://source.unsplash.com/1200x1200/?bbq-tools",
-    "description": "Presente popular para ajudar o casal: kit churrasco."
+    "description": "Kit com 10 peças para churrasco em inox, acompanha estojo. Ideal para preparar carnes com sabor e suculência."
   },
   {
     "id": "jogo-de-pratos-sobremesa",
-    "title": "Jogo de pratos sobremesa",
+    "title": "Jogo de pratos sobremesa (Porto Brasil)",
     "price": 129,
     "image": "https://source.unsplash.com/1200x1200/?dessert-plates",
-    "description": "Presente popular para ajudar o casal: jogo de pratos sobremesa."
+    "description": "Jogo com 6 pratos de sobremesa em cerâmica, 20cm. Design elegante, ideal para servir suas sobremesas favoritas."
   },
   {
     "id": "taças-para-drinks",
-    "title": "Taças para drinks",
+    "title": "Taças para drinks (Crystal Glass)",
     "price": 159,
     "image": "https://source.unsplash.com/1200x1200/?cocktail-glasses",
-    "description": "Presente popular para ajudar o casal: taças para drinks."
+    "description": "Taças para drinks em cristal, 300ml, design sofisticado. Realce o sabor dos seus coquetéis."
   },
   {
     "id": "coqueteleira",
-    "title": "Coqueteleira",
+    "title": "Coqueteleira (Wine Lover)",
     "price": 99,
     "image": "https://source.unsplash.com/1200x1200/?cocktail-shaker",
-    "description": "Presente popular para ajudar o casal: coqueteleira."
+    "description": "Coqueteleira em inox, 500ml, com filtro e dosador. Ideal para preparar drinks e coquetéis."
   },
   {
     "id": "kit-bar-dosadorcolher",
-    "title": "Kit bar (dosador/colher)",
+    "title": "Kit bar (dosador/colher) (Wine Lover)",
     "price": 89,
     "image": "https://source.unsplash.com/1200x1200/?bar-tools",
-    "description": "Presente popular para ajudar o casal: kit bar (dosador/colher)."
+    "description": "Kit com dosador e colher em inox, essenciais para preparar drinks. Design elegante e prático."
   },
   {
     "id": "balde-de-gelo",
-    "title": "Balde de gelo",
+    "title": "Balde de gelo (Wine Lover)",
     "price": 79,
     "image": "https://source.unsplash.com/1200x1200/?ice-bucket",
-    "description": "Presente popular para ajudar o casal: balde de gelo."
+    "description": "Balde de gelo em inox, capacidade para 2L. Ideal para manter suas bebidas na temperatura perfeita."
   },
   {
     "id": "fruteira",
-    "title": "Fruteira",
+    "title": "Fruteira (Inox Decor)",
     "price": 89,
     "image": "https://source.unsplash.com/1200x1200/?fruit-bowl",
-    "description": "Presente popular para ajudar o casal: fruteira."
+    "description": "Fruteira em inox, design moderno, ideal para armazenar frutas. Mantém as frutas frescas e à mão."
   },
   {
     "id": "porta-temperos",
-    "title": "Porta-temperos",
+    "title": "Porta-temperos (Inova)",
     "price": 69,
     "image": "https://source.unsplash.com/1200x1200/?spice-jars",
-    "description": "Presente popular para ajudar o casal: porta-temperos."
+    "description": "Porta-temperos em vidro com tampa hermética, mantém os temperos frescos. Design elegante, ideal para sua cozinha."
   },
   {
     "id": "kit-de-potes-para-freezer",
-    "title": "Kit de potes para freezer",
+    "title": "Kit de potes para freezer (Inova)",
     "price": 99,
     "image": "https://source.unsplash.com/1200x1200/?freezer-containers",
-    "description": "Presente popular para ajudar o casal: kit de potes para freezer."
+    "description": "Kit com 5 potes para freezer em plástico BPA free. Ideal para armazenar alimentos, conservando o sabor e a frescura."
   },
   {
     "id": "assento-sanitário-soft-close",
-    "title": "Assento sanitário soft close",
+    "title": "Assento sanitário soft close (Deca)",
     "price": 129,
     "image": "https://source.unsplash.com/1200x1200/?toilet-seat",
-    "description": "Presente popular para ajudar o casal: assento sanitário soft close."
+    "description": "Assento sanitário com sistema soft close, evita batidas. Confortável e fácil de instalar."
   },
   {
     "id": "lixeira-inox",
-    "title": "Lixeira inox",
+    "title": "Lixeira inox (Deca)",
     "price": 139,
     "image": "https://source.unsplash.com/1200x1200/?trash-can",
-    "description": "Presente popular para ajudar o casal: lixeira inox."
+    "description": "Lixeira em inox com pedal, 30L. Design moderno e higiênico, ideal para cozinhas."
   },
   {
     "id": "kit-de-velas-aromáticas",
-    "title": "Kit de velas aromáticas",
+    "title": "Kit de velas aromáticas (Yin Yang)",
     "price": 129,
     "image": "https://source.unsplash.com/1200x1200/?scented-candles",
-    "description": "Presente popular para ajudar o casal: kit de velas aromáticas."
+    "description": "Kit com 6 velas aromáticas, diferentes fragrâncias. Crie um ambiente acolhedor e perfumado."
   },
   {
     "id": "difusor-de-aromas",
-    "title": "Difusor de aromas",
+    "title": "Difusor de aromas (Philips)",
     "price": 119,
     "image": "https://source.unsplash.com/1200x1200/?diffuser",
-    "description": "Presente popular para ajudar o casal: difusor de aromas."
+    "description": "Difusor de aromas elétrico, com 7 luzes LED. Proporciona umidade e fragrância ao ambiente."
   },
   {
     "id": "plantasvasos-decorativos",
-    "title": "Plantas/vasos decorativos",
+    "title": "Plantas/vasos decorativos (Decorlar)",
     "price": 149,
     "image": "https://source.unsplash.com/1200x1200/?houseplants",
-    "description": "Presente popular para ajudar o casal: plantas/vasos decorativos."
+    "description": "Plantas em vasos decorativos, ideais para embelezar ambientes internos e externos."
   },
   {
     "id": "quadroarte-para-parede",
-    "title": "Quadro/arte para parede",
+    "title": "Quadro/arte para parede (Decorlar)",
     "price": 199,
     "image": "https://source.unsplash.com/1200x1200/?wall-art",
-    "description": "Presente popular para ajudar o casal: quadro/arte para parede."
+    "description": "Quadro decorativo com moldura, diversas opções de tamanhos e estampas. Ideal para decorar salas, quartos e escritórios."
   },
   {
     "id": "espelho-decorativo",
-    "title": "Espelho decorativo",
+    "title": "Espelho decorativo (Decorlar)",
     "price": 249,
     "image": "https://source.unsplash.com/1200x1200/?mirror%2Cdecor",
-    "description": "Presente popular para ajudar o casal: espelho decorativo."
+    "description": "Espelho decorativo com moldura, diversos tamanhos. Ideal para ampliar e iluminar ambientes."
   },
   {
     "id": "abajur",
-    "title": "Abajur",
+    "title": "Abajur (Philips)",
     "price": 179,
     "image": "https://source.unsplash.com/1200x1200/?lamp%2Chome",
-    "description": "Presente popular para ajudar o casal: abajur."
+    "description": "Abajur de mesa com base em cerâmica e cúpula em tecido. Proporciona iluminação suave e aconchegante."
   },
   {
     "id": "jogo-de-lençol-extra",
-    "title": "Jogo de lençol extra",
+    "title": "Jogo de lençol extra (Sultan)",
     "price": 229,
     "image": "https://source.unsplash.com/1200x1200/?bedsheet-set",
-    "description": "Presente popular para ajudar o casal: jogo de lençol extra."
+    "description": "Jogo de lençol extra em algodão 300 fios, toque suave e confortável. Inclui lençol de cima, lençol de baixo e duas fronhas."
   },
   {
     "id": "conjunto-de-cabides",
-    "title": "Conjunto de cabides",
+    "title": "Conjunto de cabides (Inova)",
     "price": 79,
     "image": "https://source.unsplash.com/1200x1200/?hangers",
-    "description": "Presente popular para ajudar o casal: conjunto de cabides."
+    "description": "Conjunto com 10 cabides em veludo, antideslizantes. Mantenha suas roupas organizadas e sem marcas."
   },
   {
     "id": "organizadores-de-guarda-roupa",
-    "title": "Organizadores de guarda-roupa",
+    "title": "Organizadores de guarda-roupa (Inova)",
     "price": 129,
     "image": "https://source.unsplash.com/1200x1200/?closet-organizers",
-    "description": "Presente popular para ajudar o casal: organizadores de guarda-roupa."
+    "description": "Organizadores de guarda-roupa em tecido, com divisórias ajustáveis. Mantenha suas roupas e acessórios organizados."
   },
   {
     "id": "caixa-organizadora",
-    "title": "Caixa organizadora",
+    "title": "Caixa organizadora (Inova)",
     "price": 69,
     "image": "https://source.unsplash.com/1200x1200/?storage-box",
-    "description": "Presente popular para ajudar o casal: caixa organizadora."
+    "description": "Caixa organizadora em plástico resistente, com tampa. Ideal para armazenar roupas, brinquedos e acessórios."
   },
   {
     "id": "kit-ferramentas-básico",
-    "title": "Kit ferramentas básico",
+    "title": "Kit ferramentas básico (Vonder)",
     "price": 149,
     "image": "https://source.unsplash.com/1200x1200/?tool-kit",
-    "description": "Presente popular para ajudar o casal: kit ferramentas básico."
+    "description": "Kit com 10 ferramentas manuais essenciais, acompanha estojo. Ideal para pequenos reparos e manutenções."
   },
   {
     "id": "extensãofiltro-de-linha",
-    "title": "Extensão/filtro de linha",
+    "title": "Extensão/filtro de linha (Suri)",
     "price": 79,
     "image": "https://source.unsplash.com/1200x1200/?power-strip",
-    "description": "Presente popular para ajudar o casal: extensão/filtro de linha."
+    "description": "Extensão elétrica com 4 tomadas e filtro de linha. Protege seus equipamentos contra surtos de tensão."
   },
   {
     "id": "kit-de-primeiros-socorros",
-    "title": "Kit de primeiros socorros",
+    "title": "Kit de primeiros socorros (Medline)",
     "price": 89,
     "image": "https://source.unsplash.com/1200x1200/?first-aid-kit",
-    "description": "Presente popular para ajudar o casal: kit de primeiros socorros."
+    "description": "Kit completo de primeiros socorros, com 50 itens. Ideal para ter em casa, no carro ou em viagens."
   },
   {
     "id": "cota-para-reformadecoração",
-    "title": "Cota para reforma/decoração",
+    "title": "Cota para reforma/decoração (Presente Criativo)",
     "price": 200,
     "image": "https://source.unsplash.com/1200x1200/?home-renovation",
-    "description": "Presente popular para ajudar o casal: cota para reforma/decoração."
+    "description": "Cota para reforma ou decoração, utilize como quiser. Presenteie com liberdade de escolha."
   },
   {
     "id": "cota-para-lua-de-mel",
-    "title": "Cota para lua de mel",
+    "title": "Cota para lua de mel (Presente Criativo)",
     "price": 300,
     "image": "https://source.unsplash.com/1200x1200/?honeymoon%2Ctravel",
-    "description": "Presente popular para ajudar o casal: cota para lua de mel."
+    "description": "Cota para lua de mel, contribua para a viagem dos sonhos do casal. Presenteie com uma experiência inesquecível."
   }
 ]
