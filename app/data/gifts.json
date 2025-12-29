@@ -3,7 +3,7 @@
     "id": "air-fryer",
     "title": "Air fryer (Philco)",
     "price": 399,
-    "image": "/images/air-fryer.webp",
+    "image": "/images/airfryer-philco.webp",
     "description": "Air Fryer digital, capacidade 4L, prepara alimentos crocantes e saudáveis sem óleo. Ideal para batatas, carnes e legumes. Design moderno, fácil de limpar."
   },
   {
@@ -171,112 +171,112 @@
     "id": "kit-de-utensílios-de-silicone",
     "title": "Kit de utensílios de silicone (Tramontina)",
     "price": 119,
-    "image": "",
+    "image": "/images/kit-utensilios-silicone-tramontina.webp",
     "description": "Kit com 5 utensílios de silicone, resistentes a altas temperaturas. Ideal para cozinhar e assar, não risca as superfícies."
   },
   {
     "id": "conchas-e-espátulas-kit",
     "title": "Conchas e espátulas (kit) (Tramontina)",
     "price": 89,
-    "image": "",
+    "image": "/images/conchas-espatulas-tramontina.webp",
     "description": "Kit com concha e espátula em silicone, resistentes a altas temperaturas. Ideais para cozinhar, assar e servir."
   },
   {
     "id": "ralador-multiuso",
     "title": "Ralador multiuso (Cuisinart)",
     "price": 59,
-    "image": "",
+    "image": "/images/ralador-multiuso-cuisinart.webp",
     "description": "Ralador 4 em 1, com diferentes lâminas para ralar, fatiar e picar. Acompanha recipiente coletor. Prático e fácil de limpar."
   },
   {
     "id": "descascador-de-legumes",
     "title": "Descascador de legumes (Cuisinart)",
     "price": 39,
-    "image": "",
+    "image": "/images/descascador-legumes-cuisinart.webp",
     "description": "Descascador de legumes ergonômico, lâmina em aço inox. Facilita o preparo de legumes e frutas, seguro e prático."
   },
   {
     "id": "abridor-de-vinho",
     "title": "Abridor de vinho (Wine Lover)",
     "price": 99,
-    "image": "",
+    "image": "/images/abridor-vinho.webp",
     "description": "Abridor de vinho elétrico, remove a rolha com facilidade. Acompanha cortador de lacre. Presente ideal para apreciadores de vinho."
   },
   {
     "id": "jogo-de-taças-de-vinho",
     "title": "Jogo de taças de vinho (Crystal Glass)",
     "price": 179,
-    "image": "",
+    "image": "/images/jogo-tacas-vinho.webp",
     "description": "Jogo com 6 taças de vinho em cristal, design elegante. Realce o sabor do seu vinho com estas taças sofisticadas."
   },
   {
     "id": "jogo-de-copos-kit",
     "title": "Jogo de copos (kit) (Nadir Figueiredo)",
     "price": 129,
-    "image": "",
+    "image": "/images/jogo-copos-kit.webp",
     "description": "Kit com 6 copos de vidro, design moderno e elegante. Perfeitos para água, sucos e drinks."
   },
   {
     "id": "jogo-de-xícaras-de-café",
     "title": "Jogo de xícaras de café (Porto Brasil)",
     "price": 139,
-    "image": "",
+    "image": "/images/jogo-xicaras-cafe.webp",
     "description": "Jogo com 6 xícaras de café em porcelana, design clássico. Aprecie seu café com elegância."
   },
   {
     "id": "aparelho-de-jantar-kit",
     "title": "Aparelho de jantar (kit) (Porto Brasil)",
     "price": 399,
-    "image": "",
+    "image": "/images/aparelho-jantar-kit.webp",
     "description": "Aparelho de jantar para 6 pessoas, em porcelana branca. Inclui pratos rasos, fundos e de sobremesa. Elegante e versátil."
   },
   {
     "id": "jogo-de-talheres",
     "title": "Jogo de talheres (Tramontina)",
     "price": 229,
-    "image": "",
+    "image": "/images/jogo-talheres-tramontina.webp",
     "description": "Jogo de talheres em inox para 6 pessoas, inclui faca, garfo e colher. Design sofisticado, durabilidade e resistência à corrosão."
   },
   {
     "id": "travessas-para-servir",
     "title": "Travessas para servir (Oxford)",
     "price": 159,
-    "image": "",
+    "image": "/images/travessas-oxford.webp",
     "description": "Travessa retangular em cerâmica, 35cm, ideal para servir carnes, peixes e vegetais. Design rústico e elegante."
   },
   {
     "id": "tigelas-kit",
     "title": "Tigelas (kit) (Porto Brasil)",
     "price": 129,
-    "image": "",
+    "image": "/images/tigelas-kit.webp",
     "description": "Kit com 3 tigelas em cerâmica, 500ml, 1L e 1,5L. Ideais para preparar e servir saladas, massas e sobremesas."
   },
   {
     "id": "potes-herméticos-kit",
     "title": "Potes herméticos (kit) (Hermético)",
     "price": 139,
-    "image": "",
+    "image": "/images/potes-hermeticos-kit.webp",
     "description": "Kit com 5 potes herméticos em vidro, diferentes tamanhos. Mantém alimentos frescos por mais tempo, ideal para organização da despensa."
   },
   {
     "id": "jogo-de-panelas-para-fondue",
     "title": "Jogo de panelas para fondue (Fondue & Cia)",
     "price": 199,
-    "image": "",
+    "image": "/images/jogo-panelas-fondue.webp",
     "description": "Jogo completo para fondue, panela em inox com revestimento antiaderente. Acompanha garfos e base para aquecer. Ideal para momentos especiais."
   },
   {
     "id": "conjunto-de-potes-de-vidro",
     "title": "Conjunto de potes de vidro (Hermético)",
     "price": 129,
-    "image": "",
+    "image": "/images/conjunto-potes-vidro.webp",
     "description": "Conjunto com 6 potes de vidro, tampas herméticas. Ideal para armazenar alimentos, conservando o sabor e a crocância."
   },
   {
     "id": "jarrafiltro-de-água",
     "title": "Jarra/filtro de água (Purific)",
     "price": 149,
-    "image": "",
+    "image": "/images/jarrafiltro-agua.webp",
     "description": "Jarra com filtro de água, remove impurezas e cloro. Garante água pura e saudável para você e sua família."
   },
   {
