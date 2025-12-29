@@ -82,6 +82,15 @@ async function ensure() {
   }
 }
 
+// Helpers used by other server routes (uploads, etc.)
+export function getDataDir() {
+  return DATA_DIR
+}
+
+export async function ensureDataDir() {
+  await ensure()
+}
+
 async function readAll(): Promise<{ lists: StoredList[] }> {
   await ensure()
   const raw = await fs.readFile(FILE, 'utf8')
