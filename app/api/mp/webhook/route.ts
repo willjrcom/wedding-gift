@@ -48,11 +48,49 @@ export async function POST(req: Request) {
           to: [clientEmail],
           subject: 'Pix ativado ✅ Sua lista já aceita presentes',
           html: `
-            <div style="font-family:Arial,Helvetica,sans-serif;line-height:1.5">
-              <h2>Pix ativado ✅</h2>
-              <p>Agora seus convidados já conseguem clicar em <b>Presentear</b> e copiar o Pix.</p>
-              <p><a href="${link}">${link}</a></p>
-            </div>
+            <!-- ✅ TEMPLATE: CLIENTE + ADMIN - Pix ativado -->
+<div style="margin:0;padding:0;background:#f6f7fb">
+  <div style="max-width:560px;margin:0 auto;padding:24px 16px">
+    <div style="background:#ffffff;border-radius:18px;overflow:hidden;border:1px solid #eef0f4">
+      <div style="padding:18px 20px;background:linear-gradient(135deg,#7c3aed,#a78bfa)">
+        <div style="font-family:Arial,Helvetica,sans-serif;color:#fff;font-weight:900;font-size:16px;letter-spacing:.2px">
+          Pix ativado ✅
+        </div>
+        <div style="font-family:Arial,Helvetica,sans-serif;color:#f3e8ff;font-size:12px;margin-top:6px">
+          Agora seus convidados conseguem presentear
+        </div>
+      </div>
+
+      <div style="padding:18px 20px;font-family:Arial,Helvetica,sans-serif;line-height:1.5;color:#0f172a">
+        <h2 style="margin:0 0 10px 0;font-size:18px">Pronto! 🎉</h2>
+
+        <div style="background:#faf5ff;border:1px solid #e9d5ff;border-radius:14px;padding:12px">
+          <div style="font-size:12px;color:#6b21a8">
+            Seus convidados já conseguem clicar em <b>Presentear</b> e copiar o Pix.
+          </div>
+        </div>
+
+        <div style="margin-top:14px">
+          <div style="font-size:12px;color:#64748b;margin-bottom:8px">Link da lista</div>
+
+          <a href="${link}"
+            style="display:inline-block;background:#7c3aed;color:#fff;text-decoration:none;font-weight:900;
+                  padding:12px 14px;border-radius:14px">
+            Abrir lista
+          </a>
+
+          <div style="margin-top:10px;font-size:12px;color:#64748b;word-break:break-all">
+            ${link}
+          </div>
+        </div>
+
+        <div style="margin-top:16px;font-size:11px;color:#94a3b8">
+          Se você não reconhece este pagamento, verifique a conta do Mercado Pago.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
           `
         })
       ])
