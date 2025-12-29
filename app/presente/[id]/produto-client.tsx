@@ -113,7 +113,7 @@ export default function ProdutoClient({ gift, t }: { gift: Gift; t: string }) {
           {gift.category ? <div className="mt-3 text-xs font-semibold text-slate-500">{gift.category}</div> : null}
 
           <div className="mt-6 rounded-2xl border border-slate-100 p-4">
-            <div className="text-xs font-bold text-slate-700">Presentear via Pix</div>
+            <div className="text-xs font-bold text-slate-700">Ver detalhes</div>
 
             {!paid ? (
               <div className="mt-2 text-sm text-amber-800">
