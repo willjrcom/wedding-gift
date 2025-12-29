@@ -519,178 +519,164 @@
   },
   {
     "id": "kit-churrasco",
-    "title": "Kit churrasco (MasterChef)",
+    "title": "Kit churrasco",
     "price": 199,
-    "image": "",
+    "image": "/images/kit-churrasco.webp",
     "description": "Kit com 10 peças para churrasco em inox, acompanha estojo. Ideal para preparar carnes com sabor e suculência."
   },
   {
     "id": "jogo-de-pratos-sobremesa",
     "title": "Jogo de pratos sobremesa (Porto Brasil)",
     "price": 129,
-    "image": "",
+    "image": "/images/jogo-pratos-sobremesa-portobrasil.webp",
     "description": "Jogo com 6 pratos de sobremesa em cerâmica, 20cm. Design elegante, ideal para servir suas sobremesas favoritas."
   },
   {
     "id": "tacas-para-drinks",
     "title": "Taças para drinks (Crystal Glass)",
     "price": 159,
-    "image": "",
+    "image": "/images/tacas-drinks-crystalglass.webp",
     "description": "Taças para drinks em cristal, 300ml, design sofisticado. Realce o sabor dos seus coquetéis."
   },
   {
     "id": "coqueteleira",
     "title": "Coqueteleira (Wine Lover)",
     "price": 99,
-    "image": "",
+    "image": "/images/coqueteleira-winelover.webp",
     "description": "Coqueteleira em inox, 500ml, com filtro e dosador. Ideal para preparar drinks e coquetéis."
   },
   {
     "id": "kit-bar-dosadorcolher",
     "title": "Kit bar (dosador/colher) (Wine Lover)",
     "price": 89,
-    "image": "",
+    "image": "/images/kit-bar-dosadorcolher-winelover.webp",
     "description": "Kit com dosador e colher em inox, essenciais para preparar drinks. Design elegante e prático."
   },
   {
     "id": "balde-de-gelo",
     "title": "Balde de gelo (Wine Lover)",
     "price": 79,
-    "image": "",
+    "image": "/images/balde-gelo-winelover.webp",
     "description": "Balde de gelo em inox, capacidade para 2L. Ideal para manter suas bebidas na temperatura perfeita."
   },
   {
     "id": "fruteira",
     "title": "Fruteira (Inox Decor)",
     "price": 89,
-    "image": "",
+    "image": "/images/fruteira-inoxdecor.webp",
     "description": "Fruteira em inox, design moderno, ideal para armazenar frutas. Mantém as frutas frescas e à mão."
   },
   {
     "id": "porta-temperos",
     "title": "Porta-temperos (Inova)",
     "price": 69,
-    "image": "",
+    "image": "/images/porta-temperos-inova.webp",
     "description": "Porta-temperos em vidro com tampa hermética, mantém os temperos frescos. Design elegante, ideal para sua cozinha."
   },
   {
     "id": "kit-de-potes-para-freezer",
     "title": "Kit de potes para freezer (Inova)",
     "price": 99,
-    "image": "",
+    "image": "/images/kit-potes-freezer-inova.webp",
     "description": "Kit com 5 potes para freezer em plástico BPA free. Ideal para armazenar alimentos, conservando o sabor e a frescura."
   },
   {
     "id": "assento-sanitario-soft-close",
     "title": "Assento sanitário soft close (Deca)",
     "price": 129,
-    "image": "",
+    "image": "/images/assento-sanitario-soft-close-deca.webp",
     "description": "Assento sanitário com sistema soft close, evita batidas. Confortável e fácil de instalar."
   },
   {
     "id": "lixeira-inox",
-    "title": "Lixeira inox (Deca)",
+    "title": "Lixeira inox",
     "price": 139,
-    "image": "",
+    "image": "/images/lixeira-inox.webp",
     "description": "Lixeira em inox com pedal, 30L. Design moderno e higiênico, ideal para cozinhas."
   },
   {
     "id": "kit-de-velas-aromaticas",
-    "title": "Kit de velas aromáticas (Yin Yang)",
+    "title": "Kit de velas aromáticas (Sol Interior)",
     "price": 129,
-    "image": "",
+    "image": "/images/kit-velas-aromaticas-sol-interior.webp",
     "description": "Kit com 6 velas aromáticas, diferentes fragrâncias. Crie um ambiente acolhedor e perfumado."
-  },
-  {
-    "id": "difusor-de-aromas",
-    "title": "Difusor de aromas (Philips)",
-    "price": 119,
-    "image": "",
-    "description": "Difusor de aromas elétrico, com 7 luzes LED. Proporciona umidade e fragrância ao ambiente."
   },
   {
     "id": "plantasvasos-decorativos",
     "title": "Plantas/vasos decorativos (Decorlar)",
     "price": 149,
-    "image": "",
+    "image": "/images/plantas-vasos-decorativos-decorlar.webp",
     "description": "Plantas em vasos decorativos, ideais para embelezar ambientes internos e externos."
   },
   {
     "id": "quadroarte-para-parede",
     "title": "Quadro/arte para parede (Decorlar)",
     "price": 199,
-    "image": "",
+    "image": "/images/quadroarte-para-parede-decorlar.webp",
     "description": "Quadro decorativo com moldura, diversas opções de tamanhos e estampas. Ideal para decorar salas, quartos e escritórios."
   },
   {
     "id": "espelho-decorativo",
     "title": "Espelho decorativo (Decorlar)",
     "price": 249,
-    "image": "",
+    "image": "/images/espelho-decorativo-decorlar.webp",
     "description": "Espelho decorativo com moldura, diversos tamanhos. Ideal para ampliar e iluminar ambientes."
   },
   {
     "id": "abajur",
     "title": "Abajur (Philips)",
     "price": 179,
-    "image": "",
+    "image": "/images/abajur-philips.webp",
     "description": "Abajur de mesa com base em cerâmica e cúpula em tecido. Proporciona iluminação suave e aconchegante."
   },
   {
     "id": "jogo-de-lencol-extra",
     "title": "Jogo de lençol extra (Sultan)",
     "price": 229,
-    "image": "",
+    "image": "/images/jogo-de-lencol-extra-sultan.webp",
     "description": "Jogo de lençol extra em algodão 300 fios, toque suave e confortável. Inclui lençol de cima, lençol de baixo e duas fronhas."
   },
   {
     "id": "conjunto-de-cabides",
     "title": "Conjunto de cabides (Inova)",
     "price": 79,
-    "image": "",
+    "image": "/images/conjunto-cabides-inova.webp",
     "description": "Conjunto com 10 cabides em veludo, antideslizantes. Mantenha suas roupas organizadas e sem marcas."
   },
   {
     "id": "organizadores-de-guarda-roupa",
     "title": "Organizadores de guarda-roupa (Inova)",
     "price": 129,
-    "image": "",
+    "image": "/images/organizadores-guarda-roupa-inova.webp",
     "description": "Organizadores de guarda-roupa em tecido, com divisórias ajustáveis. Mantenha suas roupas e acessórios organizados."
   },
   {
     "id": "caixa-organizadora",
     "title": "Caixa organizadora (Inova)",
     "price": 69,
-    "image": "",
+    "image": "/images/caixa-organizadora-inova.webp",
     "description": "Caixa organizadora em plástico resistente, com tampa. Ideal para armazenar roupas, brinquedos e acessórios."
   },
   {
     "id": "kit-ferramentas-basico",
     "title": "Kit ferramentas básico (Vonder)",
     "price": 149,
-    "image": "",
+    "image": "/images/kit-ferramentas-basico-vonder.webp",
     "description": "Kit com 10 ferramentas manuais essenciais, acompanha estojo. Ideal para pequenos reparos e manutenções."
   },
   {
     "id": "extensao-filtro-de-linha",
-    "title": "Extensão/filtro de linha (Suri)",
+    "title": "Extensão/filtro de linha (Intelbras)",
     "price": 79,
-    "image": "",
+    "image": "/images/extensao-filtro-de-linha-intelbras.webp",
     "description": "Extensão elétrica com 4 tomadas e filtro de linha. Protege seus equipamentos contra surtos de tensão."
   },
   {
     "id": "kit-de-primeiros-socorros",
     "title": "Kit de primeiros socorros (Medline)",
     "price": 89,
-    "image": "",
+    "image": "/images/kit-primeiros-socorros-medline.webp",
     "description": "Kit completo de primeiros socorros, com 50 itens. Ideal para ter em casa, no carro ou em viagens."
-  },
-  {
-    "id": "cota-para-reforma-decoracao",
-    "title": "Cota para reforma/decoração (Presente Criativo)",
-    "price": 200,
-    "image": "",
-    "description": "Cota para reforma ou decoração, utilize como quiser. Presenteie com liberdade de escolha."
   },
   {
     "id": "cota-para-lua-de-mel",
