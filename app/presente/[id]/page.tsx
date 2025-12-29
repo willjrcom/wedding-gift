@@ -5,15 +5,18 @@ export function generateStaticParams() {
   return (gifts as any[]).map(g => ({ id: String(g.id) }))
 }
 
-export default function PresentePage({
+// Next.js 15 tipa `params`/`searchParams` como Promises nos arquivos de rota do App Router.
+export default async function PresentePage({
   params,
   searchParams,
 }: {
-  params: { id: string }
-  searchParams?: { t?: string }
+  params: Promise<{ id: string }>
+  searchParams?: Promise<{ t?: string }>
 }) {
-  const gift = (gifts as any[]).find(g => String(g.id) === String(params.id))
-  const t = searchParams?.t || ''
+  const { id } = await params
+  const sp = (await searchParams) || {}
+  const gift = (gifts as any[]).find(g => String(g.id) === String(id))
+  const t = sp.t || ''
   if (!gift) {
     return (
       <main className="min-h-screen bg-background-light">
