@@ -16,10 +16,10 @@ const pixOptions = [
 export default function CriarPage() {
   const router = useRouter()
 
-  const today = useMemo(() => new Date().toISOString().slice(0, 10), [])
+  const today = useMemo(() => new Date().toISOString().slice(0, 10).replace(/-/g, '/'), [])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
-	const [imageFile, setImageFile] = useState<File | null>(null)
+  const [imageFile, setImageFile] = useState<File | null>(null)
 
   const [form, setForm] = useState({
     coupleName: '',
@@ -42,26 +42,26 @@ export default function CriarPage() {
 
   const set = (k: string, v: string) => setForm(s => ({ ...s, [k]: v }))
 
-	const submit = async () => {
+  const submit = async () => {
     setError('')
     setLoading(true)
     try {
-			let payload = { ...form }
+      let payload = { ...form }
 
-			// Optional: upload image to volume when a file is selected
-			if (imageFile) {
-				const fd = new FormData()
-				fd.append('file', imageFile)
-				const upRes = await fetch('/api/upload', { method: 'POST', body: fd })
-				const upData = await upRes.json()
-				if (!upRes.ok) throw new Error(upData?.error || 'Erro ao enviar imagem')
-				payload.imageUrl = upData.url
-			}
+      // Optional: upload image to volume when a file is selected
+      if (imageFile) {
+        const fd = new FormData()
+        fd.append('file', imageFile)
+        const upRes = await fetch('/api/upload', { method: 'POST', body: fd })
+        const upData = await upRes.json()
+        if (!upRes.ok) throw new Error(upData?.error || 'Erro ao enviar imagem')
+        payload.imageUrl = upData.url
+      }
 
       const res = await fetch('/api/list/create', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify(payload)
+        body: JSON.stringify(payload)
       })
       const data = await res.json()
       if (!res.ok) throw new Error(data?.error || 'Erro ao criar lista')
@@ -181,16 +181,16 @@ export default function CriarPage() {
               required
             />
 
-			<div className="-mt-1">
-				<div className="mb-1 text-sm font-medium text-slate-800">Imagem do casal (arquivo)</div>
-				<input
-					type="file"
-					accept="image/*"
-					onChange={e => setImageFile(e.target.files?.[0] || null)}
-					className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm"
-				/>
-				<div className="mt-1 text-xs text-slate-500">Opcional. Se você enviar um arquivo, ele será armazenado no servidor.</div>
-			</div>
+            <div className="-mt-1">
+              <div className="mb-1 text-sm font-medium text-slate-800">Imagem do casal (arquivo)</div>
+              <input
+                type="file"
+                accept="image/*"
+                onChange={e => setImageFile(e.target.files?.[0] || null)}
+                className="w-full rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm"
+              />
+              <div className="mt-1 text-xs text-slate-500">Opcional. Se você enviar um arquivo, ele será armazenado no servidor.</div>
+            </div>
 
             {error ? (
               <div className="rounded-2xl bg-rose-50 px-4 py-3 text-sm font-medium text-rose-700">{error}</div>
